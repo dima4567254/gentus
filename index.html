@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+  <title>Gentus</title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20230727015200">
+</head>
+
+<!-- прилепить паутину!!! -->
+<!-- картинки назвать получше -->
+<!-- и альты -->
+<!-- убрать цвета у svg -->
+
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="logo menu__logo" href="#">
+          <img class="logo__menu" src="images/logo.svg" alt="logo">
+        </a>
+        <nav class="menu">
+          <button class="menu__btn" type="button">
+            <span></span>
+            <span class="sr-only">відкрити меню</span>
+          </button>
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="#">
+                Спікери
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#service">
+                Програмa
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#collections">
+                Відгуки
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#products">
+                FAQ
+              </a>
+            </li>
+          </ul>
+          <!-- <div class="menu__nav"> -->
+          <!-- <div class="dropdown">
+                        <select class="dropdown__select">
+                            <option class="dropdown__optoon dropdown-svg" value="1" name="email">1
+                            </option>
+                            <option class="dropdown__optoon" value="0" name="email">2</option>
+                        </select>
+                    </div> -->
+          <!-- <button class="button button--cart" type="button">
+                        <svg class="button__svg" xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969"
+                            viewBox="0 0 18.94 16.969">
+                            <path class="cls-1" fill='#243f4d' fill-rule='evenodd'
+                                d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                                transform="translate(-1716 -69)" />
+                        </svg>
+                        <span class="sr-only">button cart</span>
+                    </button>
+                    <span class="sr-only">cart</span>
+                    <button class="button  button--search" type="button">
+                        <svg class="button__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="16"
+                            viewBox="0 0 15 16" font-size='16px' opacity='0.8' fill='#212121' font-family='FontAwesome'>
+                            <text id="search" class="cls-1" x="-0.112" y="13.072"></text>
+                        </svg>
+                        <span class="sr-only">button search</span>
+                    </button>
+                    <span class="sr-only">search</span> -->
+          <!-- </div> -->
+        </nav>
+        <button class="header__btn" type="button">Записатись</button>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="intro section">
+      <div class="container">
+        <div class="intro__wrapper">
+          <div class="intro__left">
+            <ul class="intro__items">
+              <li class="intro__item">
+                <svg class="intro__svg" width="30px" height="30px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#data">
+                  </use>
+                </svg>
+                <span>
+                  30 квітня
+                </span>
+              </li>
+              <li class="intro__item">
+                <svg class="intro__svg" width="30px" height="30px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#online">
+                  </use>
+                </svg>
+                <span>
+                  online
+                </span>
+              </li>
+              <li class="intro__item">
+                <svg class="intro__svg" width="30px" height="30px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#potik">
+                  </use>
+                </svg>
+                <span>
+                  3-й потік
+                </span>
+              </li>
+              <li class="intro__item">
+                <svg class="intro__svg" width="30px" height="30px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#time">
+                  </use>
+                </svg>
+                <span>
+                  3 місяці
+                </span>
+              </li>
+            </ul>
+            <h1 class="sr-only">
+              Сайт про продаж йти курсів
+            </h1>
+            <h2 class="intro__title">
+              <div class="intro__big">
+                AI
+              </div>
+              <div class="intro__text">
+                <p>
+                  <span>
+                    Для новачків
+                  </span>
+                  з 0 до повного опанування професії
+                  <span>
+                    та результату
+                  </span>
+                </p>
+                <div class="intro__specialist">спеціаліст</div>
+              </div>
+            </h2>
+            <div class="intro__info">
+              <div class="intro__star" data-rateyo-rating="4.7"></div>
+              4.89 
+              <span>із 5 (на основі 1501 оціно)</span>
+            </div>
+            <div class="intro__subtext">
+              Опануйте трендовий напрямок, збільште
+              <span>
+                ефективність у своїй роботі та почніть заробляти набагато більше за допомогою штучного інтелекту
+              </span>
+            </div>
+            <div class="intro__box">
+              <button class="intro__button" type="button">
+                Записатися на курс
+              </button>
+              <div class="intro__places">
+                Залишилось 5 місць із 25
+              </div>
+            </div>
+          </div>
+          <div class="intro__right">
+            <picture>
+              <source srcset="images/dist/main.avif" type="image/avif">
+              <source srcset="images/dist/main.webp" type="image/webp"><img class="intro__img"
+                src="images/dist/main.png" alt="AI спеціаліст">
+            </picture>
+            <div class="intro__speakers">
+              <div class="intro__inner">
+                <div class="intro__pretext">ТОП спікери</div>
+                <picture>
+                  <source srcset="images/dist/avatar1.avif" type="image/avif">
+                  <source srcset="images/dist/avatar1.webp" type="image/webp"><img class="intro__images"
+                    src="images/dist/avatar1.jpeg" alt="avatar1">
+                </picture>
+                <picture>
+                  <source srcset="images/dist/avatar3.avif" type="image/avif">
+                  <source srcset="images/dist/avatar3.webp" type="image/webp"><img class="intro__images"
+                    src="images/dist/avatar3.jpeg" alt="avatar3">
+                </picture>
+                <picture>
+                  <source srcset="images/dist/avatar2.avif" type="image/avif">
+                  <source srcset="images/dist/avatar2.webp" type="image/webp"><img class="intro__images"
+                    src="images/dist/avatar2.jpeg" alt="avatar2">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="for-what section">
+      <div class="container container--for-what">
+        <div class="for-what__wrapper">
+          <div class="for-what__images">
+            <picture>
+              <source srcset="images/dist/mushroom.avif" type="image/avif">
+              <source srcset="images/dist/mushroom.webp" type="image/webp"><img class="for-what__img"
+                src="images/dist/mushroom.jpeg" alt="Йти гриб">
+            </picture>
+          </div>
+          <div class="for-what__box">
+            <h2 class="for-what__title title">
+              Для чого потрібен
+              <span>
+                штучний інтелект?
+              </span>
+            </h2>
+            <div class="for-what__subtitle title">
+              Як з його допомогою полегшити та покращити роботу у будь-якій сфері?
+            </div>
+            <div class="for-what__text">
+              <p>
+                Сучасний штучний інтелект
+                <span>
+                  — це здатність машин і програм аналізувати інформацію, опрацьовувати її і
+                  виводити висновки, які служать основою для прийняття рішень. Головною рисою ШІ-пристроїв є їхні
+                  можливості
+                  постійного навчання, швидкої обробки інформації, накопичення знань і їх успішного використання. Це
+                  означає, що вони можуть набувати здатності сприймати та аналізувати навколишній світ, аналогічно до
+                  того,
+                  як це робить мозок людини.
+                </span>
+              </p>
+              <p>
+                <span>
+                  Потенціал застосування штучного інтелекту дуже широкий, вже зараз він використовується у багатьох
+                  сферах:
+                </span>
+                медицина, фінанси, промисловість, торгівля і звичайно у побуті людини.
+              </p>
+              <span>
+                Завдяки використанню модулів штучного інтелекту,ваш бізнес може зазнати значного зростання прибутку і
+                основних показників. 
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages section">
+      <div class="container">
+        <div class="advantages__wrapper">
+          <div class="advantages__left">
+            <h2 class="advantages__title title">
+              <span>Переваги</span>
+              знань
+            </h2>
+            <!-- <div class="advantages__text"> -->
+            <div class="advantages__inner">
+              <svg class="advantages__svg" width="17px" height="17px" fill="#bcbcbc"
+                preserveAspectRatio="xMidYMid slice">
+                <use xlink:href="images/sprite.svg#plus">
+                </use>
+              </svg>
+              <p>
+                АІ технології надійні, оскільки не допускають помилок, і виконують завдання точно згідно з наданими
+                інструкціями.
+              </p>
+            </div>
+            <div class="advantages__inner">
+              <svg class="advantages__svg" width="17px" height="17px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#plus">
+                </use>
+              </svg>
+              <p>
+                АІ дозволяє обробляти великі обсяги даних та постійно вдосконалювати свої методи.
+              </p>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="advantages__right">
+            <div class="advantages__text">
+              <span>
+                Застосування алгоритмів штучного інтелекту дозволить вам значно зменшити витрати в будь-якій сфері:
+              </span>
+            </div>
+            <ul class="advantages__items">
+              <li class="advantages__item">
+                <svg class="advantages__icon" width="64px" height="64px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#saving">
+                  </use>
+                </svg>
+                <div class="advantages__subtext">
+                  <p>
+                    Ви зможете зекономити час завдяки швидкому навчанню і відсутності помилок.
+                  </p>
+                </div>
+              </li>
+              <li class="advantages__item">
+                <svg class="advantages__icon" width="64px" height="64px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#resource">
+                  </use>
+                </svg>
+                <div class="advantages__subtext">
+                  <p>
+                    Ресурси вашого персоналу можна перерозподілити на більш креативні завдання, які не потребують
+                    рутинних
+                    дій.
+                  </p>
+                </div>
+              </li>
+              <li class="advantages__item">
+                <svg class="advantages__icon" width="64px" height="64px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#budget">
+                  </use>
+                </svg>
+                <div class="advantages__subtext">
+                  <p>
+                    Ви зможете зекономити гроші завдяки використанню інструментів штучного інтелекту, що суттєво
+                    зменшить
+                    ваш бюджет.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spheres section">
+      <div class="container">
+        <h2 class="spheres__title title">
+          В якій сфері можна застосовувати Штучний інтелект?
+        </h2>
+        <div class="spheres__text">
+          <p>
+            Штучний інтелект корисний та потрібний для різних сфер і категорій людей. Ось декілька прикладів:
+          </p>
+        </div>
+      </div>
+      <ul class="spheres__items">
+        <li class="spheres__item">
+          <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+            <use xlink:href="images/sprite.svg#saving">
+            </use>
+          </svg>
+          <div class="spheres__box">
+            <h3 class="spheres__subtitle">
+              Бізнес
+            </h3>
+            <div class="spheres__subtext">
+              <p>
+                Підприємства можуть використовувати штучний інтелект для підвищення продуктивності, автоматизації
+                процесів, аналізу даних клієнтів і прогнозування ринку
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="spheres__item">
+          <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+            <use xlink:href="images/sprite.svg#saving">
+            </use>
+          </svg>
+          <div class="spheres__box">
+            <h3 class="spheres__subtitle">Освіта</h3>
+            <div class="spheres__subtext">
+              <p>
+                Вчителі та студенти можуть використовувати інтелектуальні системи для підтримки навчання, створення
+                інтерактивних матеріалів і оцінювання студентів.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="spheres__item">
+          <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+            <use xlink:href="images/sprite.svg#saving">
+            </use>
+          </svg>
+          <div class="spheres__box">
+            <h3 class="spheres__subtitle">Фінансова галузь</h3>
+            <div class="spheres__subtext">
+              <p>
+                AІ допомагає у фінансовому аналізі, прогнозуванні ринків, управлінні ризиками та автоматизації торгівлі.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="spheres__item">
+          <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+            <use xlink:href="images/sprite.svg#saving">
+            </use>
+          </svg>
+          <div class="spheres__box">
+            <h3 class="spheres__subtitle">Клієнти</h3>
+            <div class="spheres__subtext">
+              <p>
+                Зазвичай від користувачів веб-сервісів та мобільних додатків вимагається взаємодія з інтелектуальними
+                асистентами, які допомагають з пошуком інформації, обробкою запитів і навіть з розважальними функціями.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="spheres__text">
+        <p>
+          Отже, штучний інтелект може бути корисним практично для кожної галузі та для всіх,хто прагне
+          <span>оптимізувати процеси, підвищити продуктивність та отримати більше можливостей</span>
+          у різних сферах життя і бізнесу.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="__title title">
+          .
+        </h2>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="__title title">
+          .
+        </h2>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="__title title">
+          .
+        </h2>
+      </div>
+    </section>
+
+
+
+
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+
+
+  <!--
+<a class="video" data-fancybox style="background-image: url('images/video-bg.jpg')"
+    href="https://www.youtube.com/watch?v=Y2vZlSbw3iA">
+    <span class="sr-only">play video</span>
+</a>
+-->
+
+  <!--
+  <form class="footer-top__form">
+      <label class="sr-only" for="email">
+          Enter your email
+      </label>
+      <input class="footer-top__input" id="email-input" type="email" name="email" placeholder="Your Email" required
+          oninvalid="this.setCustomValidity('fill in this field!')">
+      <button class="footer-top__btn" type="submit">
+          <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
+              xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="17" viewBox="0 0 20 17">
+              <image id="send" width="20" height="17"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAABW0lEQVQ4jaWUTytEURjGf1NiJDTjfzNlYWFhKysbvoaV72LpOyhSIikmyUiztRKmsBYz2SgNOz169d66/5sZT91u9557fud5n/fcU5B0ApwBF8Ab/5QBO8AI8AAY/Bi47xsrqaWo2pL2Ja1LGpRELxcOSNOPpIakTUmVbqFWchuYSViP6g6oAQdAMzEaK/krxV2W3j2ONUnFLId7wAJQAqaAsjUrsXJSDcDm1oGXYLTwFySMAhNeukHngKo/230emAbGgaEYuulxHAK3ATBPw76YOV8EloFVYAUYCM2zPbwVfmGrT7qTwGUFmHWXVR+3aoohWAu4BI4sBnu5DSx5hmWfVMpxHOjJM6xFfgRJ3xkdTVNH0rWkDUljaV02h5+eU55egXMvq57zXSTUND0DO8Ap8Jgy3hXQDosbYNdPoY9uQGFgsK+sWwawsq56gcSBdmxZLrYxrcT+BfwCdYhXWkZ0abIAAAAASUVORK5CYII=" />
+          </svg>
+          <span class="sr-only">send message button</span>
+      </button>
+  </form>
+
+-->
+  <script src="js/avif.js"></script>
+  <script src="js/main.min.js?_v=20230727015200"></script>
+
+</body>
+
+</html>

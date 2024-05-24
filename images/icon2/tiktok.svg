@@ -1,0 +1,14 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip33_874">
+			<rect id="ic:round-tiktok" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="ic:round-tiktok" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip33_874)">
+		<path id="Vector" d="M16.6 5.82C15.91 5.04 15.53 4.03 15.54 3L12.45 3L12.45 15.4C12.42 16.07 12.14 16.7 11.65 17.17C11.17 17.63 10.53 17.9 9.86 17.9C8.43 17.9 7.26 16.74 7.26 15.29C7.26 13.58 8.92 12.29 10.63 12.82L10.63 9.66C7.17 9.2 4.16 11.87 4.16 15.29C4.16 18.62 6.92 21 9.85 21C12.99 21 15.54 18.45 15.54 15.29L15.54 9C16.79 9.91 18.29 10.39 19.84 10.38L19.84 7.29C19.84 7.29 17.95 7.38 16.6 5.82Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

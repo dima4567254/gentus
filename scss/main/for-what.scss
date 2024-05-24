@@ -1,0 +1,74 @@
+.for-what {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 45, 20);
+  }
+
+  &__images {
+    width: 100%;
+    @include adaptiveValue(" margin-top", 100, 20);
+    background: linear-gradient(131.71deg, rgb(54, 37, 54) 10.762%, rgb(18, 18, 18) 43.452%);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: translateX(-50%); //только по вертикали ниже другое
+      left: -12%;
+      top: 0%;
+      transform: translateY(-50%); //только по горизонтали
+      width: rem(110);
+      height: rem(170);
+      background-image: url('../images/dist/decor.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+    }
+  }
+
+  &__img {
+    width: rem(450);
+    height: rem(515);
+    object-fit: cover;
+    border-radius: 32px;
+  }
+
+  &__box {
+    max-width: 550px;
+  }
+
+  &__title {
+    margin-bottom: rem(20);
+  }
+
+  &__title span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__subtitle {
+    font-size: rem(28);
+    @include line-height(48, 60);
+    margin-bottom: rem(20);
+  }
+
+  &__text {
+    font-size: rem(20);
+    font-weight: 400;
+    @include line-height(20, 26);
+  }
+
+  &__text p {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__text span {
+    opacity: .7;
+  }
+}

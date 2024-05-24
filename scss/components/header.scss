@@ -1,0 +1,87 @@
+// .header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 200;
+// }
+
+.header {
+  @include adaptiveValue("padding-top", 70, 20);
+  // background-color: red;
+  // display: flex;
+  // justify-content: space-between;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: transparent;
+    font-weight: 400;
+    // padding: 12px 44px;
+    @include adaptiveValue("padding-bottom", 12, 0);
+    @include adaptiveValue("padding-top", 12, 0);
+    @include adaptiveValue("padding-left", 44, 20);
+    @include adaptiveValue("padding-right", 44, 20);
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    transition: color .5s;
+
+    &:focus {
+      color: $focus;
+    }
+
+    &:hover {
+      color: $ac;
+      border: 1px solid $ac;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+
+  // &__logo {}
+
+  // &__btn {}
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("gap", 40, 20);
+  }
+
+  // &__item {}
+
+  &__link {
+    font-size: 14px;
+    transition: color .5s;
+
+    &:focus {
+      color: $focus;
+    }
+
+    &:hover {
+      color: $ac;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+.logo__menu {
+  width: rem(84);
+  height: rem(34);
+  object-fit: cover;
+}

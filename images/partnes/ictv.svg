@@ -1,0 +1,18 @@
+<svg width="188.000000" height="60.000000" viewBox="0 0 188 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip3_1258">
+			<rect id="logo/ictv" width="188.000000" height="60.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="logo/ictv" width="188.000000" height="60.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip3_1258)">
+		<path id="Vector" d="M73.84 15L69.49 24.69L58 24.69L66.42 31.53L60.82 44L71.38 35.56L78.12 41.04L76.54 31.44L85 24.69L75.43 24.69L73.84 15Z" fill="#F04F23" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M88 26L91 26L91 35L88 35L88 26Z" fill="#F04F23" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector" d="M105 29.29C105 27.27 103.12 26 99.5 26C95.59 26 94 27.5 94 30.5C94 33.5 95.59 35 99.5 35C103.12 35 105 33.72 105 31.7L101.73 31.7C101.25 33.42 97.26 33.79 97.26 30.5C97.26 27.2 101.25 27.57 101.73 29.29L105 29.29Z" fill="#F04F23" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M107 26L107 28.16L109.66 28.16C109.79 28.16 109.92 28.22 110.02 28.31C110.11 28.4 110.16 28.52 110.16 28.65L110.16 35L113.83 35L113.83 28.65C113.83 28.52 113.88 28.4 113.98 28.31C114.07 28.22 114.2 28.16 114.33 28.16L117 28.16L117 26L107 26Z" fill="#F04F23" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M118.9 26L121.75 35L127.14 35L130 26L126.51 26L124.84 31.94C124.68 32.54 124.22 32.54 124.05 31.94L122.39 26L117 26L118.9 26Z" fill="#F04F23" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
