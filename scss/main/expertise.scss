@@ -1,0 +1,63 @@
+.expertise {
+  &__title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: rem(20);
+  }
+
+  &__subtext span,
+  &__text span,
+  &__title span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__text {
+    @include adaptiveValue("margin-bottom", 40, 20);
+    font-size: rem(20);
+    font-weight: 400;
+    @include line-height(20, 26);
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: rem(20);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__img {
+    width: rem(325);
+    height: rem(485);
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  &__box {
+    border-radius: 20px;
+    @include adaptiveValue("padding-top", 40, 20);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(180.00deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.69) 50.292%);
+  }
+
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 40, 20);
+  }
+
+  &__subtext {
+    margin-bottom: rem(20);
+  }
+
+  &__subtext span {
+    margin-bottom: rem(10);
+  }
+}

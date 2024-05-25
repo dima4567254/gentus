@@ -15,6 +15,11 @@
 <!-- картинки назвать получше -->
 <!-- и альты -->
 <!-- убрать цвета у svg -->
+<!-- for-you возможно переделать контейнер на еще один -->
+<!-- for-you можно было сделать фон отдельно -->
+<!-- перепроверить fz700 -->
+<!-- decor.jpg вырезался с краями -->
+<!-- expertise передалть на max-witgh в рем -->
 
 <body class="body">
   <header class="header">
@@ -148,7 +153,7 @@
             <div class="intro__info">
               <div class="intro__star" data-rateyo-rating="4.7"></div>
               4.89 
-              <span>із 5 (на основі 1501 оціно)</span>
+              <span>із 5 (на основі 1501 оцінок)</span>
             </div>
             <div class="intro__subtext">
               Опануйте трендовий напрямок, збільште
@@ -157,7 +162,7 @@
               </span>
             </div>
             <div class="intro__box">
-              <button class="intro__button" type="button">
+              <button class="intro__button button" type="button">
                 Записатися на курс
               </button>
               <div class="intro__places">
@@ -290,7 +295,9 @@
                   </use>
                 </svg>
                 <div class="advantages__subtext">
-                  Ви зможете зекономити час завдяки швидкому навчанню і відсутності помилок.
+                  <p>
+                    Ви зможете зекономити час завдяки швидкому навчанню і відсутності помилок.
+                  </p>
                 </div>
               </li>
               <li class="advantages__item">
@@ -299,9 +306,11 @@
                   </use>
                 </svg>
                 <div class="advantages__subtext">
-                  Ресурси вашого персоналу можна перерозподілити на більш креативні завдання, які не потребують
-                  рутинних
-                  дій.
+                  <p>
+                    Ресурси вашого персоналу можна перерозподілити на більш креативні завдання, які не потребують
+                    рутинних
+                    дій.
+                  </p>
                 </div>
               </li>
               <li class="advantages__item">
@@ -310,68 +319,1113 @@
                   </use>
                 </svg>
                 <div class="advantages__subtext">
-                  Ви зможете зекономити гроші завдяки використанню інструментів штучного інтелекту, що суттєво
-                  зменшить
-                  ваш бюджет.
+                  <p>
+                    Ви зможете зекономити гроші завдяки використанню інструментів штучного інтелекту, що суттєво
+                    зменшить
+                    ваш бюджет.
+                  </p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-
       </div>
     </section>
 
     <section class="spheres section">
       <div class="container">
         <h2 class="spheres__title title">
-          В якій сфері можна застосовувати Штучний інтелект?
+          <span>В якій сфері</span>
+          можна застосовувати Штучний інтелект?
         </h2>
-        <div class="spheres__text">
+        <div class="spheres__pretext">
           <p>
             Штучний інтелект корисний та потрібний для різних сфер і категорій людей. Ось декілька прикладів:
           </p>
         </div>
-
+        <ul class="spheres__items">
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#briefcase">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">
+                Бізнес
+              </h3>
+              <div class="spheres__subtext">
+                <p>
+                  Підприємства можуть використовувати штучний інтелект для підвищення продуктивності, автоматизації
+                  процесів, аналізу даних клієнтів і прогнозування ринку
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#education">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Освіта</h3>
+              <div class="spheres__subtext">
+                <p>
+                  Вчителі та студенти можуть використовувати інтелектуальні системи для підтримки навчання, створення
+                  інтерактивних матеріалів і оцінювання студентів.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#finance">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Фінансова галузь</h3>
+              <div class="spheres__subtext">
+                <p>
+                  AІ допомагає у фінансовому аналізі, прогнозуванні ринків, управлінні ризиками та автоматизації
+                  торгівлі.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#clients">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Клієнти</h3>
+              <div class="spheres__subtext">
+                <p>
+                  Зазвичай від користувачів веб-сервісів та мобільних додатків вимагається взаємодія з інтелектуальними
+                  асистентами, які допомагають з пошуком інформації, обробкою запитів і навіть з розважальними
+                  функціями.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#designers">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Веб-дизайнери</h3>
+              <div class="spheres__subtext">
+                <p>
+                  Штучний інтелект може аналізувати дані та взаємодію користувачів на сайті, надаючи важливу інформацію
+                  для оптимізації дизайну. Крім того, він може створювати веб-сайти, призначені для індивідуальних
+                  користувачів на основі їхніх інтересів і попереднього досвіду.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#medicine">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Медицина</h3>
+              <div class="spheres__subtext">
+                <p>
+                  AІ допомагає лікарям у діагностиці, обробці медичних зображень, розробці нових лікарських засобів і
+                  веденні електронних медичних записів.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#science">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Науковці</h3>
+              <div class="spheres__subtext">
+                <p>
+                  Вчені використовують AІ для аналізу складних наукових даних, симуляцій і вирішення складних наукових
+                  завдань.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#car">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Автоперевезення</h3>
+              <div class="spheres__subtext">
+                <p>
+                  Індустрія автотранспорту використовує ШІ для розвитку автономних автомобілів та оптимізації маршрутів
+                  доставки.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#smm">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">SMM-менеджери</h3>
+              <div class="spheres__subtext">
+                <p>
+                  За допомогою штучного інтелекту, SMM-спеціалісти можуть аналізувати великі обсяги даних з соціальних
+                  мереж, визначати тенденції та отримувати рекомендації для успішних кампаній. Автоматизовані
+                  інструменти спрощують процес планування та публікації контенту, а також взаємодію з аудиторією через
+                  чат-боти та індивідуалізовані повідомлення.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="spheres__item">
+            <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#it">
+              </use>
+            </svg>
+            <div class="spheres__box">
+              <h3 class="spheres__subtitle">Програмісти</h3>
+              <div class="spheres__subtext">
+                <p>
+                  У програмуванні, штучний інтелект використовується для автоматизації рутинних завдань, тестування
+                  програм та виявлення помилок. Він також сприяє створенню інтелектуальних програм, які можуть навчатися
+                  і адаптуватися до змінних умов.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="spheres__text">
+          <p>
+            Отже, штучний інтелект може бути корисним практично для кожної галузі та для всіх,хто прагне
+            <span>оптимізувати процеси, підвищити продуктивність та отримати більше можливостей</span>
+            у різних сферах життя і бізнесу.
+          </p>
+        </div>
       </div>
-      <ul class="spheres__items">
-        <li class="spheres__item">
-          <svg class="spheres__svg" width="48px" height="48px" fill="#bcbcbc">
-            <use xlink:href="images/sprite.svg#saving">
-            </use>
-          </svg>
-          <div class="spheres__subtext">
-            spheres
+    </section>
+
+    <section class="for-you section">
+      <div class="container">
+        <div class="for-you__wrapper">
+          <h2 class="for-you__title title">
+            Цей курс <span>точно для тебе</span>, якщо ти
+          </h2>
+          <ul class="for-you__items">
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Мрієш автоматизувати та полегшити свою роботу
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Але не знаєш як це зробити
+                </p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Бажаєш пришвидшити робочі процеси та зекономити
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Подорожувати та працювати з будь-якої точки світу
+                <p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Хочеш використовувати Штучний інтелект
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Але не розумієш, як початисвій шлях, щоб швидшеотримати результат
+                </p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Мама у декреті
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Яка шукає додатковий заробіток, який зможепоєднувати із сім'єю
+                </p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Офісний співробітник
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Який втомився від рутинної роботи,хоче свободи, розвиткута фінансового зростання
+                </p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Студент
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Який шукає себе і справу,в якій зможе реалізувати свійпотенціал та отримуватиприбуток
+                </p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Фрілансер
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Який хоче навчитися швидкота просто застосовуватизнання зі Штучного інтелектуу своїй роботі
+                </p>
+              </div>
+            </li>
+            <li class="for-you__item">
+              <svg class="for-you__svg" width="48px" height="48px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#briefcase">
+                </use>
+              </svg>
+              <h3 class="for-you__subtitle">
+                Підприємець
+              </h3>
+              <div class="for-you__text">
+                <p>
+                  Що бажає покращитита полегшити робочі процеси
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise section">
+      <div class="container container--expertise">
+        <h2 class="expertise__title title">
+          Хто проводить
+          <span>навчання?</span>
+        </h2>
+        <div class="expertise__text">
+          <p>
+            Якщо і вчитися – то лише у найкращих! Наші експерти –
+            <span>ТОП на ринку IT </span>
+            та будуть передавати вам свій
+            досвідта
+            знання протягом 
+            <span>3 місяців</span>
+          </p>
+        </div>
+        <ul class="expertise__items">
+          <li class="expertise__item">
+            <picture>
+              <source srcset="images/dist/boris.avif" type="image/avif">
+              <source srcset="images/dist/boris.webp" type="image/webp"><img class="expertise__img"
+                src="images/boris.jpg" alt="Борис Дрожак">
+            </picture>
+            <div class="expertise__box">
+              <h3 class="expertise__subtitle">Борис Дрожак</h3>
+              <div class="expertise__subtext">
+                <span>
+                  Director of engineering and Principal SWE в мультимільярдній AI компанії
+                </span>
+                <p>
+                  Власник ресторанного бізнесу в Україні
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="expertise__item">
+            <picture>
+              <source srcset="images/dist/ulana.avif" type="image/avif">
+              <source srcset="images/dist/ulana.webp" type="image/webp"><img class="expertise__img"
+                src="images/ulana.jpeg" alt="Уляна Литвин">
+            </picture>
+            <div class="expertise__box">
+              <h3 class="expertise__subtitle">Уляна Литвин</h3>
+              <div class="expertise__subtext">
+                <span>
+                  8 років досвіду у сфері маркетингу в соціальних мережах
+                </span>
+                <p>
+                  CEO TM Grofa
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="expertise__item">
+            <picture>
+              <source srcset="images/dist/violetta.avif" type="image/avif">
+              <source srcset="images/dist/violetta.webp" type="image/webp"><img class="expertise__img"
+                src="images/dist/violetta.jpeg" alt="Віолетта Лозюк">
+            </picture>
+            <div class="expertise__box">
+              <h3 class="expertise__subtitle">Віолетта Лозюк</h3>
+              <div class="expertise__subtext">
+                <span>
+                  Засновниця Global Scale
+                </span>
+                <p>
+                  Співзасновниця Ukrainian Business Way
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="studies">
+      <div class="container">
+        <div class="studies__wrapper">
+          <div class="studies__left">
+            <h2 class="studies__title title">
+              Чому конкретно ви навчитеся?
+            </h2>
+            <div class="studies__text">
+              Дивіться повну програму курсу
+            </div>
           </div>
-        </li>
-      </ul>
-
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="__title title">
-          .
-        </h2>
+          <div class="studies__right">
+            <div class="studies__subtext">
+              <p>
+                Ви отримаєте
+                <span>структуровані знання, тотальну практику та досвід найкращих спікерів у своєму
+                  напрямку.
+                </span>
+              </p>
+            </div>
+            <ul class="studies__items">
+              <li class="studies__item">
+                <div class="studies__number">
+                  <span>3</span>
+                </div>
+                <div class="studies__info">
+                  місяці
+                </div>
+              </li>
+              <li class="studies__item">
+                <div class="studies__number">
+                  <span>23</span>
+                </div>
+                <div class="studies__info">
+                  модуля
+                </div>
+              </li>
+              <li class="studies__item">
+                <div class="studies__number">
+                  <span>92</span>
+                </div>
+                <div class="studies__info">
+                  теми
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <div class="tabs section">
       <div class="container">
-        <h2 class="__title title">
-          .
+        <div class="tabs__wrapper">
+          <ul class="tabs__left">
+            <li class="tabs__item tabs__item--active">
+              <a class="tabs__link tabs__link--active" href="#tab1">
+                <div class="tabs__number"></div>
+                <span>
+                  ChatGPT. Технологічна Грамотність
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab2">
+                <div class="tabs__number"></div>
+                <span>
+                  Art generation. Технологічна Грамотність
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab3">
+                <div class="tabs__number"></div>
+                <span>
+                  База. Інтро в АІ. Основи напряму. Що так штучний інтелект.
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab4">
+                <div class="tabs__number"></div>
+                <span>
+                  Гроші та ROI. Розумніння профітабільності з АІ. Як рахувати профіт проектів з АІ та довгострокові
+                  нюанси
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab5">
+                <div class="tabs__number"></div>
+                <span>
+                  Інтеграція 1. Знайти місця застосування АІ. Як люди заробляють з АІ сервіси
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab6">
+                <div class="tabs__number"></div>
+                <span>
+                  Інтеграція 2. Зони використання АІ для великих компаній: Як великі компанії використовують АІ для
+                  ліпшого ROI
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab7">
+                <div class="tabs__number"></div>
+                <span>
+                  Розуміння Даних. Бути готовим до Штучного інтелекту. Приклади задач які вирішуються тільки машинним
+                  навчанням. Види Візуалізації даних. Маніпуляції за рахунок візуалізації даних
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab8">
+                <div class="tabs__number"></div>
+                <span>
+                  Art generation. Технологічна Грамотність
+                </span>
+              </a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#tab9">
+                <div class="tabs__number"></div>
+                <span>
+                  Art generation. Технологічна Грамотність
+                </span>
+              </a>
+            </li>
+          </ul>
+          <div class="tabs__right tabs__right--active" id="tab1">
+            <div class="tabs__subtitle">
+              Модуль №1. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab2">
+            <div class="tabs__subtitle">
+              Модуль №2. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab3">
+            <div class="tabs__subtitle">
+              Модуль №3. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab4">
+            <div class="tabs__subtitle">
+              Модуль №4. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab5">
+            <div class="tabs__subtitle">
+              Модуль №5. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab6">
+            <div class="tabs__subtitle">
+              Модуль №6. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab7">
+            <div class="tabs__subtitle">
+              Модуль №7. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab8">
+            <div class="tabs__subtitle">
+              Модуль №8. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+          <div class="tabs__right" id="tab9">
+            <div class="tabs__subtitle">
+              Модуль №9. ChatGPT. Технологічна Грамотність
+            </div>
+            <ul class="tabs__items">
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Технологічна грамотність LLM
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Наслідки для бізнесу
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Приклади використання людьми з різних сфер
+                </p>
+              </li>
+              <li>
+                <svg class="tabs__svg" width="8px" height="8px" fill="#bcbcbc">
+                  <use xlink:href="images/sprite.svg#cube">
+                  </use>
+                </svg>
+                <p>
+                  Best practices
+                </p>
+              </li>
+            </ul>
+            <div class="tabs__text">
+              <span>В результаті :</span>
+              <p>
+                На цьому занятті ми з вами надихнемость технологією та на реальних випадках навчимось працювати з
+                ChatGPT,
+                як експерти І надихнемось можливостями АІ в 2024
+              </p>
+            </div>
+            <button class="tabs__button button" type="button">
+              Записатися на курс
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="awaits-you section">
+      <div class="container">
+        <h2 class="awaits-you__title title">
+          Що чекає на вас на курсі
         </h2>
+        <ul class="awaits-you__items">
+          <li class="awaits-you__item">
+            <svg class="awaits-you__svg" width="72px" height="72px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#task">
+              </use>
+            </svg>
+            <div class="awaits-you__box">
+              <h3 class="awaits-you__subtitle">
+                Практичні домашні завдання
+              </h3>
+              <div class="awaits-you__subtext">
+                <p>
+                  Ми подбали про те, щоб ви якомога легше та продуктивніше освоїли нову професію та відточували свої
+                  навички на практиці.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="awaits-you__item">
+            <svg class="awaits-you__svg" width="72px" height="72px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#curators">
+              </use>
+            </svg>
+            <div class="awaits-you__box">
+              <h3 class="awaits-you__subtitle">
+                Куратори, ментори-практики
+              </h3>
+              <div class="awaits-you__subtext">
+                <p>
+                  Ви отримаєте користь від досвіду фахівців, які успішно працюють у великих IT-компаніях і знають, як
+                  систематизувати інформацію для вас. Вас завжди підтримають і допоможуть.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="awaits-you__item">
+            <svg class="awaits-you__svg" width="72px" height="72px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#studying">
+              </use>
+            </svg>
+            <div class="awaits-you__box">
+              <h3 class="awaits-you__subtitle">
+                Навчання у зручний час
+              </h3>
+              <div class="awaits-you__subtext">
+                <p>
+                  Уроки проходять наживо – 2-3 рази на тиждень. Після кожного уроку ти отримуватимеш його запис, який буде доступний в особистому кабінеті 24/7.
+
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="awaits-you__item">
+            <svg class="awaits-you__svg" width="72px" height="72px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#opportunity">
+              </use>
+            </svg>
+            <div class="awaits-you__box">
+              <h3 class="awaits-you__subtitle">Можливість вчитися з 0</h3>
+              <div class="awaits-you__subtext">
+                <p>
+                  Ми розробили програму так, щоб будь-яка людина, навіть без технічної або IT-освіти, могла легко зрозуміти її.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="awaits-you__item">
+            <svg class="awaits-you__svg" width="72px" height="72px" fill="#bcbcbc">
+              <use xlink:href="images/sprite.svg#diplomas">
+              </use>
+            </svg>
+            <div class="awaits-you__box">
+              <h3 class="awaits-you__subtitle">Диплом</h3>
+              <div class="awaits-you__subtext">
+                <p>
+                  По завершенню курсу у вас є можливість отримати диплом, який буде видаватися на основі вашої успішності у виконанні домашніх завдань та результатів тестування.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
+    <!-- tabs на рем !!!-->
+    <section class="studies">
       <div class="container">
-        <h2 class="__title title">
-          .
-        </h2>
       </div>
     </section>
-
 
 
 
@@ -407,7 +1461,7 @@
   </form>
 
 -->
-  <script src="js/avif.js?_v=20240525021928"></script>
+  <script src="js/avif.js?_v=20240526023045"></script>
   <script src="js/main.min.js?_v=20230727015200"></script>
 
 </body>

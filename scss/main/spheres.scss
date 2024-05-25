@@ -1,0 +1,82 @@
+.spheres {
+  &__title {
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__title span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__pretext {
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 60, 20);
+    max-width: 675px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: rem(24);
+    font-weight: 400;
+    max-width: 1040px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: 0;
+      height: rem(155);
+      width: rem(180);
+      left: 50%;
+      transform: translateX(-50%); //только по вертикали ниже другое
+      background-image: url('../images/dist/img.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+
+  &__text span {
+    opacity: .7;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(20);
+    @include adaptiveValue("margin-bottom", 110, 20);
+  }
+
+  &__item {
+    border-radius: 20px;
+    background: radial-gradient(433.76% 96.88% at 100% 100%, rgb(80, 71, 64), rgb(92, 67, 89) 16.363%, rgb(56, 43, 63) 42.194%, rgb(23, 23, 23) 100%);
+    max-width: 605px;
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-left", 40, 20);
+    @include adaptiveValue("padding-right", 40, 20);
+  }
+
+  &__svg {
+    @include adaptiveValue("margin-right", 30, 20);
+  }
+
+  // &__box {}
+
+  &__subtitle {
+    font-size: rem(26);
+    margin-bottom: rem(10);
+  }
+
+  &__subtext {
+    max-width: 445px;
+  }
+}

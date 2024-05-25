@@ -6,6 +6,100 @@ $(".intro__star").rateYo({
   normalFill: "#121212"
 });
 
+$('.tabs__link').on('click', function (e) {
+  e.preventDefault();
+  $('.tabs__link').removeClass('tabs__link--active');
+  $(this).addClass('tabs__link--active');
+
+  $('.tabs__right').removeClass('tabs__right--active');
+  $($(this).attr('href')).addClass('tabs__right--active'); /*убирает добовляет класс*/
+});
+
+// $('.functions-tab__link').on('click', function (e) {
+//   e.preventDefault();
+
+//   $('.functions-tab__link').removeClass('functions-tab__link--active');
+//   $(this).addClass('functions-tab__link--active');
+
+//   // $('.product-tabs__text').removeClass('product-tabs__text--active');
+//   // $(this).addClass('product-tabs__text--active');
+
+//   $('.functions-tab__tab').removeClass('functions-tab__tab--active');
+//   $($(this).attr('href')).addClass('functions-tab__tab--active'); /*убирает добовляет класс*/
+//   // табы
+//   // product-tabs__text--active
+//   // .attr('href') влияет на перезагрузку страници
+// });
+
+// 'use strict';//строгий режим
+// const tab = document.querySelectorAll('.tabs__item'),
+//   info = document.querySelector('.tabs__item'),
+//   tabContent = document.querySelectorAll('.tabs__right');
+
+// function hideTabContent(a) {
+//   for (let i = a; i < tabContent.length; i++) {
+//     tabContent[i].classList.remove('show');
+//     tabContent[i].classList.add('hide');
+//   }
+// }
+
+// hideTabContent(1);
+
+// function showTabContent(b) {
+//   if (tabContent[b].classList.contains('hide')) {
+//     tabContent[b].classList.remove('hide')
+//     tabContent[b].classList.add('show')
+//   }
+// }
+
+// info.addEventListener('click', (event) => {
+//   let target = event.target;
+//   if (target && target.classList.contains('info-header-tab')) {
+//     for (let i = 0; i < tab.length; i++) {
+//       if (target == tab[i]) {
+//         hideTabContent(0);
+//         showTabContent(i);
+//         break;
+//       };
+//     };
+//   };
+// })
+
+// info.addEventListener('click', (event) => {
+//     let target = event.target;
+//     if (target && target.classList.contains('info-header-tab')) {
+//         for (let i = 0; i < tab.length; i++) {
+//             if (target == tab[i]) {
+//                 hideTabContent(0);
+//                 showTabContent(i);
+//                 break;
+//             };
+//         };
+//     };
+// });
+// ---
+
+// $('.tabs__link').on('click', function (e) {
+//   e.preventDefault();
+
+//   $('.tabs__link').removeClass('active');
+//   $(this).addClass('active');
+//   // $('.tabs__item').removeClass('active');
+//   // $(this).addClass('active');
+
+//   $('.tabs__right').addClass('active');
+//   $($(this).attr('href')).removeClass('active'); /*убирает добовляет класс*/
+// });
+// $('.rates-tabs__link').on('click', function (e) {
+//   e.preventDefault();
+
+//   $('.rates-tabs__link').removeClass('rates-tabs__link--active');
+//   $(this).addClass('rates-tabs__link--active');
+
+//   $('.rates-tabs__text').removeClass('rates-tabs__text--active');
+//   $($(this).attr('href')).addClass('rates-tabs__text--active'); /*убирает добовляет класс*/
+// });
+
 // $('.menu__btn, .menu a').on('click', function () {
 //     $('.menu__btn, .menu__items').toggleClass('active');
 //     // для крестика и для меню и что бы закрывалось меню после выбора сcылки

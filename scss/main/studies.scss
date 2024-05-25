@@ -1,0 +1,227 @@
+.studies {
+  background-image: url('../images/dist/studies_bg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include adaptiveValue("padding-bottom", 80, 40);
+  @include adaptiveValue("padding-top", 80, 40);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right {
+    max-width: rem(385)
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 20);
+    max-width: rem(460);
+  }
+
+  &__text {
+    font-size: rem(20);
+    font-weight: 400;
+    @include line-height(20, 26);
+    opacity: 0.7;
+  }
+
+  &__subtext {
+    margin-bottom: rem(20);
+  }
+
+  &__subtext span {
+    opacity: 0.7;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 50, 20);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__number {
+    background: rgb(139, 87, 194);
+    width: rem(64);
+    height: rem(64);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(10);
+  }
+
+  &__number span {
+    font-size: rem(32);
+    font-weight: 700;
+    @include line-height(32, 26);
+  }
+
+  &__info {
+    font-size: rem(20);
+    font-weight: 500;
+    @include line-height(20, 26);
+    text-transform: uppercase;
+  }
+}
+
+
+.tabs {
+  background: rgb(255, 255, 255);
+
+  &__wrapper {
+    display: flex;
+    @include adaptiveValue("gap", 25, 20);
+    // justify-content: space-between;
+  }
+
+  &__left {
+    max-width: rem(500);
+    counter-reset: item-counter;
+    width: 100%;
+    height: 840px;
+    overflow: scroll;
+  }
+
+  &__number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(139, 87, 194);
+    position: relative;
+
+    &:before {
+      content: counter(item-counter) " ";
+      /* Вывод значения счётчика */
+      position: absolute;
+      color: rgb(255, 255, 255);
+      font-size: rem(12);
+      font-weight: 700;
+      // flex: 1 1 5%;
+      // max-width: 24px;
+    }
+  }
+
+  // &__item {}
+
+  &__link {
+    @include adaptiveValue("padding-bottom", 32, 20);
+    @include adaptiveValue("padding-top", 32, 20);
+    @include adaptiveValue("padding-left", 10, 0);
+    color: #666666;
+    font-size: rem(18);
+    font-weight: 400;
+    counter-increment: item-counter;
+    cursor: pointer;
+    gap: rem(15);
+    display: flex;
+    align-items: center;
+
+    &--active {
+      background: rgb(231, 218, 245);
+      // font-weight: 700;
+      color: rgb(0, 0, 0);
+      // не по макету но мешает!!!
+    }
+  }
+
+  &__link span {
+    max-width: 380px;
+  }
+
+  &__right {
+    display: none;
+    max-width: rem(710);
+    width: 100%;
+    border: 1px solid rgb(230, 230, 230);
+    // @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-top", 30, 20);
+    @include adaptiveValue("padding-left", 30, 10);
+
+    // @include adaptiveValue("padding-right", 16, 10);
+    &--active {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(24);
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__items {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 595px;
+    @include adaptiveValue("margin-bottom", 30, 20);
+    gap: rem(20);
+  }
+
+  &__items li {
+    display: flex;
+    align-items: center;
+    max-width: 285px;
+    color: rgb(0, 0, 0);
+    font-size: rem(18);
+    font-weight: 400;
+    width: 100%;
+  }
+
+  &__svg {
+    margin-right: rem(10);
+    flex: 1 1 5%;
+    max-width: 8px;
+  }
+
+  &__text {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    background: rgb(235, 235, 235);
+    padding: 20px 65px;
+    @include adaptiveValue("margin-bottom", 30, 20);
+    max-width: 605px;
+  }
+
+  &__text span {
+    color: #000000;
+    margin-bottom: rem(10);
+    display: block;
+    font-weight: 700;
+  }
+
+  &__button {
+    padding: 12px 44px;
+    font-weight: 400;
+    border: 2px solid white;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+// ul li::marker {
+//   content: '• '; /* Задаем символ маркера, если нужно */
+//   border-radius: 100px;
+//   background: rgb(139, 87, 194);
+//   color: white; /* Цвет текста маркера */
+//   padding: 2px 5px; /* Добавляем отступы для лучшего отображения фона */
+// }

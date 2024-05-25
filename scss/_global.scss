@@ -23,6 +23,49 @@ body {
   line-height: -1px;
   letter-spacing: 0%;
   background-color: rgb(18, 18, 18);
+  // background-image: url('../images/dist/bg-shapes.jpg');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // z-index: 999;
+  // position: relative;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url('../images/dist/bg-shapes.jpg');
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: cover;
+  //   // width: 1435px;
+  //   // height: 1435px;
+  //   // left: 768px;
+  //   // right: 882px;
+  //   // top: -107px;
+  //   // bottom: 11817px;
+  //   // top: 0;
+  //   // right: 0;
+  //   // height: 1435px;
+  //   // width: 851px;//795//50%
+  //   // right: -30px;
+  //   // height: 1670px;
+  //   // width: 850px;
+
+  //   // width: 1435px;
+  //   // height: 100%;
+  //   // width: 100%;
+  //   // height: 700px;
+
+  //   // width: 795px;
+  //   // width: 3085px;
+  //   // height: 13145px;
+  //   // background-image: url('../images/bg-shapes.svg');
+  //   // background-image: url('../images/union.svg');
+  //   // background-repeat: no-repeat;
+  //   // background-position: center;
+  //   // background-size: cover;
+  //   // z-index: 999;
+  // }
 }
 
 .sr-only {
@@ -54,6 +97,31 @@ body {
   &--for-what {
     max-width: 1210px;
   }
+
+  &--expertise {
+    max-width: 1225px;
+  }
+}
+
+.button {
+  border-radius: 10px;
+  background-color: rgb(139, 87, 194);
+  color: rgb(255, 255, 255);
+  transition: color .5s;
+  border: 2px solid transparent;
+
+  &:focus {
+    color: $focus;
+  }
+
+  &:hover {
+    color: $ac;
+    border: 2px solid $ac;
+  }
+
+  &:active {
+    color: $active;
+  }
 }
 
 // .svg {
@@ -63,6 +131,7 @@ body {
 .title {
   font-size: rem(48);
   @include line-height(48, 60);
+  font-weight: 700;//потом проверить проставлнгл ли
   // font-size: 36px;
   // text-align: center;
   // letter-spacing: 0.04em;

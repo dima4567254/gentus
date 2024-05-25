@@ -1,0 +1,44 @@
+.awaits-you {
+  &__title {
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 40, 20);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(20);
+  }
+
+  &__item {
+    // display: flex;
+    // justify-content: space-between;
+    padding: 55px 40px;
+    max-width: 605px;
+    border-radius: 20px;
+    /* genius.space/gradient */
+    background: radial-gradient(3755.70% 141.42% at 0% 100%, rgb(80, 71, 64), rgb(92, 67, 89) 16.363%, rgb(56, 43, 63) 42.194%, rgb(23, 23, 23) 100%)
+      /* Предупреждение: градиент использует вращение, не поддерживаемое CSS, и может работать не так, как ожидается. */
+    ;
+  }
+
+  &__svg {
+    @include adaptiveValue("margin-right", 30, 20);
+  }
+
+  // &__box {
+   
+  // }
+
+  &__subtitle {
+    color: rgb(139, 87, 194);
+    font-size: rem(20);
+    font-weight: 700;
+    @include line-height(20, 26);
+    // text-align: center;
+    margin-bottom: rem(10);
+  }
+
+  &__subtext {}
+}
