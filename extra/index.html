@@ -1976,13 +1976,15 @@
               </p>
             </div>
           </div>
-          <div class="nstallment__box">
-            <div class="nstallment__subtext">
-              <p>
-                Пропозиція діє до:
-              </p>
-              <span>18</span>
-              <p>квітня</p>
+          <div class="nstallment__boxs">
+            <div class="nstallment__box">
+              <div class="nstallment__subtext">
+                <p>
+                  Пропозиція діє до:
+                </p>
+                <span>18</span>
+                <p>квітня</p>
+              </div>
             </div>
           </div>
           <div class="nstallment__inner">
@@ -2000,10 +2002,7 @@
                   Вибирайте зручний формат розстрочки від:
                 </p>
               </div>
-              <svg class="nstallment__svg" width="96px" height="26px" fill="#bcbcbc">
-                <use xlink:href="images/sprite.svg#privat">
-                </use>
-              </svg>
+              <img class="nstallment__img" src="images/dist/privat.png" alt="Приват Банк">
               <svg class="nstallment__svg" width="115px" height="10px" fill="#bcbcbc">
                 <use xlink:href="images/sprite.svg#universal">
                 </use>
@@ -2019,9 +2018,154 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="reserve section">
       <div class="container">
-        <h2 class="title title"></h2>
+        <div class="reserve__left">
+          <ul class="reserve__items">
+            <li class="reserve__item">
+              <svg class="reserve__svg" width="14px" height="18px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#data-web">
+                </use>
+              </svg>
+              <span>
+                30 квітня
+              </span>
+            </li>
+            <li class="reserve__item">
+              <svg class="reserve__svg" width="14px" height="18px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#online-web">
+                </use>
+              </svg>
+              <span>
+                online
+              </span>
+            </li>
+            <li class="reserve__item">
+              <svg class="reserve__svg" width="14px" height="18px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#potik-web">
+                </use>
+              </svg>
+              <span>
+                3-й потік
+              </span>
+            </li>
+            <li class="reserve__item">
+              <svg class="reserve__svg" width="14px" height="18px" fill="#bcbcbc">
+                <use xlink:href="images/sprite.svg#time-web">
+                </use>
+              </svg>
+              <span>
+                3 місяці
+              </span>
+            </li>
+          </ul>
+          <h2 class="reserve__title">
+            <p>AI</p>
+            <span>спеціаліст</span>
+            з 0 до повного опанування професії та результату $
+          </h2>
+          <div class="reserve__text">
+            <p>
+              Щоб першим забронювати участь та
+              <span>
+                підключитисядо лімітованої групи на кращих умовах,
+              </span>
+              заповніть форму
+            </p>
+          </div>
+          <div class="reserve__subtext">
+            <p>
+              До підвищення цін залишилося:
+            </p>
+          </div>
+          <ul class="reserve__items">
+            <li class="reserve__item">
+              <span>
+                03
+              </span>
+              <p>Дні</p>
+            </li>
+            <li class="reserve__item">
+              <span>
+                06
+              </span>
+              <p>Годин</p>
+            </li>
+            <li class="reserve__item">
+              <span>
+                03
+              </span>
+              <p>Хвилин</p>
+            </li>
+            <li class="reserve__item">
+              <span>
+                15
+              </span>
+              <p>Секунд</p>
+            </li>
+        </div>
+        <form class="form">
+          <div class="form__box">
+            Знижки до
+            <span>-50 %</span>
+            на навчання
+          </div>
+          <h2 class="form__title">
+            Забронювати місце на курсі
+          </h2>
+          <div class="form__text">
+            <p>
+              Заповніть форму та переходь тедо вибору зручного пакета участі
+            </p>
+          </div>
+          <label class="form__label" for="text">
+            Ваше ім’я та прізвище
+          </label>
+          <input class="form__input" id="text" type="text" name="name" placeholder="Ваше ім’я та прізвище" required
+            oninvalid="this.setCustomValidity('введіть ваше прізвище')">
+
+          <label class="form__label" for="email">
+            Ваш email
+          </label>
+          <input class="form__input" id="email" type="email" name="email" placeholder="Ваш email" required
+            oninvalid="this.setCustomValidity('Введіть вашу пошту')">
+          <div class="wrapper">
+            <dl id="country-select" class="dropdown">
+              <dt><a href="javascript:void(0);"><span><span
+                      style="background-position:0px -1694px"></span><span>India</span><span>+91</span></span></a></dt>
+              <dd>
+                <ul style="display: none;">
+                  <li><a cunt_code="+380" href="javascript:void(0);"><span
+                        style="background-position:0px -2002px"></span><span>Ukraine</span><span>+380</span></a></li>
+                  <li><a cunt_code="+91" href="javascript:void(0);"><span
+                        style="background-position:0px -1694px"></span><span>India</span><span>+91</span></a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <button class="form__button button" type="button">
+            Записатися на курс
+          </button>
+          <div class="form__subtext">
+            <p>Залишилось 5 місць із 25</p>
+          </div>
+
+          <div class="form__policy">
+            <p>
+              Натискаючи на кнопку, я погоджуюсь на 
+            </p>
+            <a class="form__link" href="https://ua-policies.genius.space/policies">
+              обробку персональних даних
+            </a>
+          </div>
+          <!-- <label class="form__label" for="tel">
+            Номер телефону*
+          </label>
+          <input class="form__input" id="tel" type="tel" name="tel" required
+          oninvalid="this.setCustomValidity('Введіть ваш телефон')"> -->
+
+        </form>
+      </div>
       </div>
     </section>
 
@@ -2046,18 +2190,10 @@
       </label>
       <input class="footer-top__input" id="email-input" type="email" name="email" placeholder="Your Email" required
           oninvalid="this.setCustomValidity('fill in this field!')">
-      <button class="footer-top__btn" type="submit">
-          <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
-              xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="17" viewBox="0 0 20 17">
-              <image id="send" width="20" height="17"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAABW0lEQVQ4jaWUTytEURjGf1NiJDTjfzNlYWFhKysbvoaV72LpOyhSIikmyUiztRKmsBYz2SgNOz169d66/5sZT91u9557fud5n/fcU5B0ApwBF8Ab/5QBO8AI8AAY/Bi47xsrqaWo2pL2Ja1LGpRELxcOSNOPpIakTUmVbqFWchuYSViP6g6oAQdAMzEaK/krxV2W3j2ONUnFLId7wAJQAqaAsjUrsXJSDcDm1oGXYLTwFySMAhNeukHngKo/230emAbGgaEYuulxHAK3ATBPw76YOV8EloFVYAUYCM2zPbwVfmGrT7qTwGUFmHWXVR+3aoohWAu4BI4sBnu5DSx5hmWfVMpxHOjJM6xFfgRJ3xkdTVNH0rWkDUljaV02h5+eU55egXMvq57zXSTUND0DO8Ap8Jgy3hXQDosbYNdPoY9uQGFgsK+sWwawsq56gcSBdmxZLrYxrcT+BfwCdYhXWkZ0abIAAAAASUVORK5CYII=" />
-          </svg>
-          <span class="sr-only">send message button</span>
-      </button>
   </form>
 
 -->
-  <script src="js/avif.js?_v=20240527000105"></script>
+  <script src="js/avif.js?_v=20240527021027"></script>
   <script src="js/main.min.js?_v=20230727015200"></script>
 
 </body>
