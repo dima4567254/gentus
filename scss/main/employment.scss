@@ -1,0 +1,51 @@
+.employment {
+  &__wrapper {
+    border-radius: 32px;
+    background: rgb(33, 33, 33);
+    @include adaptiveValue("padding-bottom", 80, 20);
+    @include adaptiveValue("padding-top", 80, 20);
+    @include adaptiveValue("padding-left", 105, 20);
+    @include adaptiveValue("padding-right", 105, 20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 30, 20);
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 40, 20);
+  }
+
+  &__title span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__item {
+    display: flex;
+    @include adaptiveValue("gap", 35, 20);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__svg {
+    @include adaptiveValue("margin-right", 20, 0);
+  }
+
+  &__text {
+    max-width: rem(470);
+    font-size: rem(16);
+    font-weight: 700;
+  }
+
+  &__text span {
+    opacity: 0.7;
+  }
+
+  &__img {
+    width: rem(395);
+    height: rem(315);
+    object-fit: contain;
+  }
+}

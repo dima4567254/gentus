@@ -1,0 +1,129 @@
+.nstallment {
+  &__wrapper {
+    border-radius: 32px;
+    background: rgb(33, 33, 33);
+    padding: 80px 90px 80px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 54%;
+      transform: translateX(-50%); //только по вертикали ниже другое
+      height: rem(325);
+      width: rem(315);
+      background-image: url('../images/dist/nstallment.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: -100;
+    }
+  }
+
+  &__info {
+    max-width: rem(415)
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 20px;
+    height: rem(255);
+    backdrop-filter: blur(16px);
+    background: rgba(18, 18, 18, 0.7);
+    padding: rem(20);
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__title span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__text {
+    font-size: rem(20);
+    font-weight: 400;
+    @include line-height(20, 26);
+  }
+
+  &__text span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__subtext p {
+    max-width: 140px;
+    font-size: rem(20);
+    @include line-height(20, 26);
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__subtext span {
+    color: rgb(139, 87, 194);
+    font-size: rem(64);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+    display: block;
+  }
+
+  &__subtitle {
+    font-size: rem(20);
+    @include line-height(20, 26);
+    font-weight: 700;
+    margin-bottom: rem(20);
+  }
+
+  &__item p {
+    padding-left: rem(15);
+  }
+
+  &__item {
+    font-size: rem(14);
+    font-weight: 400;
+    @include line-height(14, 26);
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); //только по горизонтали
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  &__img {
+    width: rem(96);
+    height: rem(27);
+    object-fit: cover;
+    margin-bottom: rem(10);
+  }
+
+  &__svg {
+    display: block;
+    margin-bottom: rem(10);
+  }
+}

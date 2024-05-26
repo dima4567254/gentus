@@ -1,0 +1,123 @@
+.result {
+  &__title {
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__title span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__text {
+    font-size: rem(20);
+    font-weight: 400;
+    @include line-height(20, 26);
+    text-align: center;
+    max-width: rem(490);
+    margin: 0 auto;
+    @include adaptiveValue("margin-bottom", 40, 20);
+  }
+
+  &__text span {
+    color: rgb(139, 87, 194);
+  }
+
+  &__list {
+    background-color: #2A2A2A;
+    @include adaptiveValue("margin-bottom", 40, 20);
+    display: flex;
+    @include adaptiveValue("padding-bottom", 20, 10);
+    @include adaptiveValue("padding-top", 25, 20);
+    @include adaptiveValue("padding-left", 30, 20);
+    @include adaptiveValue("padding-right", 20, 10);
+  }
+
+  &__one {
+    max-width: rem(595);
+    background: rgb(139, 87, 194);
+    display: block;
+    width: 50%;
+    height: rem(24);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: rem(44);
+      top: 50%;
+      transform: translateY(-50%); //только по горизонтали
+      border: 2px solid rgb(139, 87, 194);
+      z-index: 100;
+    }
+  }
+
+  &__two {
+    max-width: rem(365);
+    background: rgb(239, 133, 236);
+    display: block;
+    width: 30%;
+    height: rem(24);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: rem(44);
+      top: 50%;
+      transform: translateY(-50%); //только по горизонтали
+      border: 2px solid rgb(239, 133, 236);
+    }
+  }
+
+  &__three {
+    max-width: rem(230);
+    background: rgb(255, 255, 255);
+    display: block;
+    width: 30%;
+    height: rem(24);
+  }
+
+  &__items {
+    max-width: rem(920);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: rem(20);
+    font-weight: 700;
+    @include line-height(20, 26);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__numbers {
+    // padding: 13px 4px;
+    padding-top: rem(13);
+    padding-bottom: rem(13);
+    padding-left: rem(4);
+    padding-right: rem(4);
+    margin-right: rem(20);
+
+    &--practice {
+      border-radius: 10px;
+      background: rgb(139, 87, 194);
+    }
+
+    &--theory {
+      border-radius: 10px;
+      background: rgb(239, 133, 236);
+      color: rgb(0, 0, 0);
+    }
+
+    &--jingle {
+      border-radius: 10px;
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+    }
+  }
+}
