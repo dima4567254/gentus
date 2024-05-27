@@ -1,3 +1,4 @@
+
 $(".intro__star").rateYo({
   rating: 4.7,
   starWidth: "24px",
@@ -6,53 +7,205 @@ $(".intro__star").rateYo({
   normalFill: "#121212"
 });
 
-// смена страны
-$('.tabs__link').on('click', function (e) {
-  e.preventDefault();
-  $('.tabs__link').removeClass('tabs__link--active');
-  $(this).addClass('tabs__link--active');
-
-  $('.tabs__right').removeClass('tabs__right--active');
-  $($(this).attr('href')).addClass('tabs__right--active'); /*убирает добовляет класс*/
+$('.reviews-slider').slick({
+  slidesToShow: 5,  /* количество слайдов на показ*/
+  slidesToScroll: 1,
+  centerMode: true,
+  arrows: false,
+  centerPadding: '0%',
+  // variableWidth: true,
+  
+  // autoplay: true,
+  // autoplaySpeed: 3000,
+  // responsive: [
+  //     {
+  //         breakpoint: 768,
+  //         settings: {
+  //             slidesToShow: 2,
+  //             slidesToScroll: 2,
+  //         }
+  //     },
+  //     {
+  //         breakpoint: 577,
+  //         settings: {
+  //             slidesToShow: 1,
+  //             // slidesToScroll: 2,
+  //         }
+  //     },
+  // ]
 });
 
-function setCountry(code){
-  if(code || code==''){
-      var text = jQuery('a[cunt_code="'+code+'"]').html();
-      $(".dropdown dt a span").html(text);
+const audio = document.getElementById("background-music");
+const playPauseButton = document.getElementById("play-pause-button");
+const playIcon = document.getElementById("play-music");
+const pauseIcon = document.getElementById("pause-music");
+
+let isPlaying = false;
+
+function togglePlayPause() {
+  console.log("Toggle function called");
+  if (isPlaying) {
+    audio.pause();
+    playIcon.classList.remove("hidden");
+    pauseIcon.classList.add("hidden");
+  } else {
+    audio.play();
+    playIcon.classList.add("hidden");
+    pauseIcon.classList.remove("hidden");
   }
+  isPlaying = !isPlaying;
 }
-$(document).ready(function() {
-  $(".dropdown img.flag").addClass("flagvisibility");
 
-  $(".dropdown dt a").click(function() {
-      $(".dropdown dd ul").toggle();
-  });
+playPauseButton.addEventListener("click", togglePlayPause);
 
-  $(".dropdown dd ul li a").click(function() {
-      //console.log($(this).html())
-      var text = $(this).html();
-      $(".dropdown dt a span").html(text);
-      $(".dropdown dd ul").hide();
-      $("#result").html("Selected value is: " + getSelectedValue("country-select"));
-  });
-
-  function getSelectedValue(id) {
-      //console.log(id,$("#" + id).find("dt a span.value").html())
-      return $("#" + id).find("dt a span.value").html();
-  }
-
-  $(document).bind('click', function(e) {
-      var $clicked = $(e.target);
-      if (! $clicked.parents().hasClass("dropdown"))
-          $(".dropdown dd ul").hide();
-  });
-
-
-  $("#flagSwitcher").click(function() {
-      $(".dropdown img.flag").toggleClass("flagvisibility");
-  });
+audio.addEventListener("ended", function () {
+  audio.currentTime = 0;
+  audio.play();
 });
+
+var swiper = new Swiper(".swiper", {
+  grabCursor: true,
+  initialSlide: 5,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 15,
+  speed: 1000,
+  loop: true,
+  freeMode: false,
+  mousewheel: {
+    thresholdDelta: 30,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  on: {
+    click(event) {
+      swiper.slideTo(this.clickedIndex);
+    },
+  },
+});
+
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 180,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: "#fff",
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: 0.3,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 4,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 4,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 2,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: false,
+    },
+    move: {
+      enable: true,
+      speed: 0.4,
+      direction: "right",
+      random: true,
+      straight: false,
+      out_mode: "none",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
+      },
+    },
+  },
+  retina_detect: true,
+});
+
+
+
+
+
+
+// const reviewsSlider = new Swiper('.reviewsSlider', {
+//   // slidesToShow: 5,
+//   slidesToScroll: 1,
+//   centerMode: true,
+//   slidesPerView: 3,
+//   loop: true,
+//   spaceBetween: 15,
+//   navigation: {
+//     nextEl: '.button-next',
+//     prevEl: '.button-prev',
+//   },
+// })
+
+// смена страны
+// $('.tabs__link').on('click', function (e) {
+//   e.preventDefault();
+//   $('.tabs__link').removeClass('tabs__link--active');
+//   $(this).addClass('tabs__link--active');
+
+//   $('.tabs__right').removeClass('tabs__right--active');
+//   $($(this).attr('href')).addClass('tabs__right--active'); /*убирает добовляет класс*/
+// });
+
+// function setCountry(code){
+//   if(code || code==''){
+//       var text = jQuery('a[cunt_code="'+code+'"]').html();
+//       $(".dropdown dt a span").html(text);
+//   }
+// }
+// $(document).ready(function() {
+//   $(".dropdown img.flag").addClass("flagvisibility");
+
+//   $(".dropdown dt a").click(function() {
+//       $(".dropdown dd ul").toggle();
+//   });
+
+//   $(".dropdown dd ul li a").click(function() {
+//       //console.log($(this).html())
+//       var text = $(this).html();
+//       $(".dropdown dt a span").html(text);
+//       $(".dropdown dd ul").hide();
+//       $("#result").html("Selected value is: " + getSelectedValue("country-select"));
+//   });
+
+//   function getSelectedValue(id) {
+//       //console.log(id,$("#" + id).find("dt a span.value").html())
+//       return $("#" + id).find("dt a span.value").html();
+//   }
+
+//   $(document).bind('click', function(e) {
+//       var $clicked = $(e.target);
+//       if (! $clicked.parents().hasClass("dropdown"))
+//           $(".dropdown dd ul").hide();
+//   });
+
+
+//   $("#flagSwitcher").click(function() {
+//       $(".dropdown img.flag").toggleClass("flagvisibility");
+//   });
+// });
 
 // $('.functions-tab__link').on('click', function (e) {
 //   e.preventDefault();
