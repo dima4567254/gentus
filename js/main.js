@@ -14,7 +14,7 @@ $('.reviews-slider').slick({
   arrows: false,
   centerPadding: '0%',
   // variableWidth: true,
-  
+
   // autoplay: true,
   // autoplaySpeed: 3000,
   // responsive: [
@@ -35,111 +35,36 @@ $('.reviews-slider').slick({
   // ]
 });
 
-const audio = document.getElementById("background-music");
-const playPauseButton = document.getElementById("play-pause-button");
-const playIcon = document.getElementById("play-music");
-const pauseIcon = document.getElementById("pause-music");
+$(document).ready(function () {
+  $('.questions__items > li > .questions__text').hide();
 
-let isPlaying = false;
-
-function togglePlayPause() {
-  console.log("Toggle function called");
-  if (isPlaying) {
-    audio.pause();
-    playIcon.classList.remove("hidden");
-    pauseIcon.classList.add("hidden");
-  } else {
-    audio.play();
-    playIcon.classList.add("hidden");
-    pauseIcon.classList.remove("hidden");
-  }
-  isPlaying = !isPlaying;
-}
-
-playPauseButton.addEventListener("click", togglePlayPause);
-
-audio.addEventListener("ended", function () {
-  audio.currentTime = 0;
-  audio.play();
+  $('.questions__items > li').click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active").find(".questions__text").slideUp();
+    } else {
+      $(".questions__items > li  .active .questions__text").slideUp();
+      $(".questions__items > li  .active").removeClass("active");
+      $(this).addClass("active").find(".questions__text").slideDown();
+    }
+    return false;
+  });
 });
 
-var swiper = new Swiper(".swiper", {
-  grabCursor: true,
-  initialSlide: 5,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  spaceBetween: 15,
-  speed: 1000,
-  loop: true,
-  freeMode: false,
-  mousewheel: {
-    thresholdDelta: 30,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  on: {
-    click(event) {
-      swiper.slideTo(this.clickedIndex);
-    },
-  },
+$(document).ready(function () {
+  $('.faq__accordion > li >.faq__text').hide();
+
+  $('.faq__accordion > li').click(function () {
+      if ($(this).hasClass("active")) {
+          $(this).removeClass("active").find(".faq__text").slideUp();
+      } else {
+          $(".faq__accordion > li  .active .faq__text").slideUp();
+          $(".faq__accordion > li  .active").removeClass("active");
+          $(this).addClass("active").find(".faq__text").slideDown();
+      }
+      return false;
+  });
 });
 
-particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 180,
-      density: {
-        enable: true,
-        value_area: 800,
-      },
-    },
-    color: {
-      value: "#fff",
-    },
-    shape: {
-      type: "circle",
-    },
-    opacity: {
-      value: 0.3,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 4,
-        opacity_min: 0.1,
-        sync: false,
-      },
-    },
-    size: {
-      value: 4,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 2,
-        size_min: 0.1,
-        sync: false,
-      },
-    },
-    line_linked: {
-      enable: false,
-    },
-    move: {
-      enable: true,
-      speed: 0.4,
-      direction: "right",
-      random: true,
-      straight: false,
-      out_mode: "none",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200,
-      },
-    },
-  },
-  retina_detect: true,
-});
 
 
 
