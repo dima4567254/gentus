@@ -1,82 +1,127 @@
 .footer {
-    background-image: url('../images/dist/paper-bg.jpeg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
+  // @include adaptiveValue("padding-top", 100, 20);
+  padding-top: 100px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        display: block;
-        background: rgba(255, 255, 255, 0.75);
-        z-index: -1;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 200, 20);
+    border-bottom: 1px solid rgb(65, 65, 65);
+    @include adaptiveValue("padding-bottom", 80, 20);
+  }
+
+  // &__inner {}
+
+  &__logo {
+    width: rem(85);
+    height: rem(34);
+    object-fit: cover;
+    @include adaptiveValue("margin-bottom", 30, 20);
+    display: block;
+  }
+
+  &__address {
+    @include adaptiveValue("margin-bottom", 30, 20);
+    max-width: rem(250);
+    font-weight: 400;
+  }
+
+  &__address span {
+    text-transform: uppercase;
+  }
+
+  // &__items {
+  // }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font-size: rem(18);
+    margin-bottom: rem(20);
+  }
+
+  &__link {
+    font-weight: 400;
+    transition: color .5s;
+
+    &--bottom {
+      color: rgb(215, 215, 215);
     }
 
-    &__city {
-        color: $black2;
-        font-size: 28px;
-        font-weight: 700;
-        @include adaptiveValue("margin-bottom", 40, 20);
-
-        @media (max-width: 576px) {
-            font-size: 26px;
-        }
+    &:focus {
+      color: $focus;
     }
 
-    &__wrapper {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        @include adaptiveValue("margin-bottom", 45, 20);
-
-        @media (max-width: 768px) {
-            display: block;
-        }
+    &:hover {
+      color: $ac;
     }
 
-    &__link {
-        font-size: 22px;
-        text-decoration: revert;
-        margin-bottom: 10px;
-        display: block;
+    &:active {
+      color: $active;
     }
 
-    &__text {
-        color: $brown;
-        font-size: 16px;
-        @include adaptiveValue("margin-bottom", 30, 20);
+    &--modi {
+      text-decoration: underline 1px solid white;
     }
+  }
 
-    &__link,
-    &__red {
-        transition: color .5s;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 30, 20);
+  }
 
-        &:focus {
-            color: $focus;
-        }
+  &__info {
+    display: flex;
+    align-items: center;
 
-        &:hover {
-            color: $ac;
-        }
-
-        &:active {
-            color: $active;
-        }
+    &:not(:last-child) {
+      margin-bottom: rem(10);
     }
+  }
 
-    &__copy {
-        color: $brown;
-        text-align: center;
+  &__svg {
+    margin-right: rem(15);
+  }
 
-        @media (max-width: 768px) {
-            text-align: start;
-        }
-    }
+  &__bottom {
+    display: flex;
+    font-size: rem(12);
+    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("gap", 25, 20);
+    letter-spacing: -0.6px;
+  }
+
+  &__list {
+    display: flex;
+    @include adaptiveValue("gap", 25, 20);
+  }
+
+  &__copy {
+    letter-spacing: -0px;
+  }
 }
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(20);
+
+  &__item {}
+
+  &__link {}
+
+  &__svg {}
+}
+
+
+
+.logo {}
+
+.logo__footer {}

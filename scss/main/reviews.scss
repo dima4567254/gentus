@@ -62,7 +62,6 @@
 
 .reviews-slider .slick-center {
   transform: scale(1.5);
-  border-radius: 30px;
 
   // margin-top: -15px;
   opacity: 1;
@@ -73,6 +72,31 @@
   //   // margin-top: 0;
   // }
 }
+
+// скруглить углы и что бы отоброжалось нормально
+
+.reviews-slider .slick-center .reviews-slider__img {
+  height: 825px !important;
+  // height: 534px !important;
+  border-radius: 30px;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+// .reviews .slick-center .review {
+//   -webkit-transform: scale(1.7);
+//   -ms-transform: scale(1.7);
+//   transform: scale(1.7);
+// }
+
+// .reviews .review {
+//   height: 415px;
+//   -webkit-transition: .3s ease;
+//   transition: .3s ease;
+// }
 
 // .reviews-slider .slick-center div li img {
 //   // margin-top: -15px;
@@ -132,7 +156,7 @@
 // .active {
 //   display: flex;
 //   align-items:center;
-  
+
 // }
 
 // .one-slider-img {
