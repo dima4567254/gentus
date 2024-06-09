@@ -11,7 +11,7 @@ $('.reviews-slider').slick({
   slidesToShow: 5,  /* количество слайдов на показ*/
   slidesToScroll: 1,
   centerMode: true,
-  arrows: false,
+  // arrows: false,
   centerPadding: '0%',
   // variableWidth: true,
 
@@ -34,6 +34,50 @@ $('.reviews-slider').slick({
   //     },
   // ]
 });
+// $(document).ready(function () {
+//   $('.reviews-slider').slick({
+//     arrows: true
+//   });
+
+//   var delay = 5000; // Задержка в миллисекундах (1 секунда)
+//   var isTransitioning = false;
+
+//   $('.slick-prev, .slick-next').on('click', function (e) {
+//     if (isTransitioning) {
+//       e.preventDefault();
+//       return;
+//     }
+//     isTransitioning = true;
+//     setTimeout(function () {
+//       isTransitioning = false;
+//     }, delay);
+//   });
+// });
+
+// $(document).ready(function(){
+//   $('.slider').slick({
+//       arrows: true
+//   });
+
+//   var delay = 1000; // Задержка в миллисекундах (1 секунда)
+
+//   $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+//       // Отключаем нажатие на стрелки до завершения задержки
+//       $('.slick-prev, .slick-next').addClass('disabled');
+
+//       setTimeout(function(){
+//           $('.slick-prev, .slick-next').removeClass('disabled');
+//       }, delay);
+//   });
+
+//   // Переопределяем стандартное поведение стрелок
+//   $('.slick-prev, .slick-next').on('click', function(e){
+//       if ($(this).hasClass('disabled')) {
+//           e.preventDefault();
+//           e.stopImmediatePropagation();
+//       }
+//   });
+// });
 
 $(document).ready(function () {
   $('.questions__items > li > .questions__text').hide();
@@ -50,23 +94,74 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $('.faq__accordion > li >.faq__text').hide();
+// function name(params) {
+//   // let buttonModal4 = 
 
-  $('.faq__accordion > li').click(function () {
-      if ($(this).hasClass("active")) {
-          $(this).removeClass("active").find(".faq__text").slideUp();
-      } else {
-          $(".faq__accordion > li  .active .faq__text").slideUp();
-          $(".faq__accordion > li  .active").removeClass("active");
-          $(this).addClass("active").find(".faq__text").slideDown();
-      }
-      return false;
+//   buttonModal4.addEventListener('click', () => {
+//   });
+// }
+
+
+// Grab the toggle trigger and the sub UL
+const dataTriggers = document.querySelectorAll('.accordion__button');
+const dataTargets = document.querySelectorAll('.accordion__content');
+
+// Add a data attribute and count up
+dataTriggers.forEach((dataTrigger, index) => {
+  dataTrigger.setAttribute('data-trigger', `toggle-${index + 1}`);
+
+  // Drop in some accessible standards
+  dataTrigger.setAttribute('aria-controls', `toggle-${index + 1}`);
+
+  dataTrigger.addEventListener('click', function () {
+    this.classList.toggle('active');
+
+    dataTrigger.setAttribute(
+      'aria-expanded',
+      `${!(dataTrigger.getAttribute('aria-expanded') === 'true')}`
+    );
   });
 });
 
+// Add an ID to each continuer that will slide
+dataTargets.forEach((dataTarget, index) => {
+  dataTarget.setAttribute('id', `toggle-${index + 1}`);
+});
 
+for (i = 0; i < dataTriggers.length; i++) {
+  dataTriggers[i].addEventListener('click', function () {
+    var container = document.getElementById(this.dataset.trigger);
 
+    if (!container.classList.contains('active')) {
+      container.classList.add('active');
+      container.style.height = 'auto';
+
+      var height = container.clientHeight + 'px';
+
+      container.style.height = '0px';
+
+      setTimeout(function () {
+        container.style.height = height;
+      }, 0);
+    } else {
+      container.style.height = '0px';
+
+      container.addEventListener(
+        'transitionend',
+        function () {
+          container.classList.remove('active');
+        },
+        {
+          once: true,
+        }
+      );
+    }
+  });
+}
+
+// ('.questions__item').on('click', function () {
+//   $('.questions__text').toggleClass('active');
+// });
 
 
 

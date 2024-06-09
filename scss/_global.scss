@@ -101,6 +101,10 @@ body {
   &--expertise {
     max-width: 1225px;
   }
+
+  &--reviews {
+    max-width: 1390px;
+  }
 }
 
 .button {
@@ -131,7 +135,7 @@ body {
 .title {
   font-size: rem(48);
   @include line-height(48, 60);
-  font-weight: 700;//потом проверить проставлнгл ли
+  font-weight: 700; //потом проверить проставлнгл ли
   // font-size: 36px;
   // text-align: center;
   // letter-spacing: 0.04em;
