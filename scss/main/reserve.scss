@@ -179,6 +179,7 @@
 
     &--tel {
       @include adaptiveValue("margin-bottom", 30, 20);
+      // @include adaptiveValue("padding-left", 75, 20);
     }
 
     &--name,
@@ -214,4 +215,27 @@
   &__link {
     text-decoration: underline;
   }
+}
+
+// стили плагина инпута телефона
+.iti {
+  width: 100%;
+  margin-bottom: rem(10);
+}
+
+.iti__selected-flag {
+  padding: 0 6px 0 32px;
+}
+
+.iti__country-name {
+  color: #999999;
+}
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=text],
+.iti--allow-dropdown input[type=tel],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=text],
+.iti--separate-dial-code input[type=tel] {
+  @include adaptiveValue("padding-left", 75, 20);
 }

@@ -94,6 +94,16 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  var input = document.querySelector("#tel");
+  window.intlTelInput(input, {
+    initialCountry: "ua", // установка Украины по умолчанию
+    placeholderNumberType: "none", // убрать пример номера
+    separateDialCode: false, //выключить код страны
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+  });
+});
+
 // function name(params) {
 //   // let buttonModal4 = 
 
@@ -102,62 +112,200 @@ $(document).ready(function () {
 // }
 
 
-// Grab the toggle trigger and the sub UL
-const dataTriggers = document.querySelectorAll('.accordion__button');
-const dataTargets = document.querySelectorAll('.accordion__content');
+// // Grab the toggle trigger and the sub UL
+// const dataTriggers = document.querySelectorAll('.accordion__button');
+// const dataTargets = document.querySelectorAll('.accordion__content');
 
-// Add a data attribute and count up
-dataTriggers.forEach((dataTrigger, index) => {
-  dataTrigger.setAttribute('data-trigger', `toggle-${index + 1}`);
+// // Add a data attribute and count up
+// dataTriggers.forEach((dataTrigger, index) => {
+//   dataTrigger.setAttribute('data-trigger', `toggle-${index + 1}`);
 
-  // Drop in some accessible standards
-  dataTrigger.setAttribute('aria-controls', `toggle-${index + 1}`);
+//   // Drop in some accessible standards
+//   dataTrigger.setAttribute('aria-controls', `toggle-${index + 1}`);
 
-  dataTrigger.addEventListener('click', function () {
-    this.classList.toggle('active');
+//   dataTrigger.addEventListener('click', function () {
+//     this.classList.toggle('active');
 
-    dataTrigger.setAttribute(
-      'aria-expanded',
-      `${!(dataTrigger.getAttribute('aria-expanded') === 'true')}`
-    );
-  });
-});
+//     dataTrigger.setAttribute(
+//       'aria-expanded',
+//       `${!(dataTrigger.getAttribute('aria-expanded') === 'true')}`
+//     );
+//   });
+// });
 
-// Add an ID to each continuer that will slide
-dataTargets.forEach((dataTarget, index) => {
-  dataTarget.setAttribute('id', `toggle-${index + 1}`);
-});
+// // Add an ID to each continuer that will slide
+// dataTargets.forEach((dataTarget, index) => {
+//   dataTarget.setAttribute('id', `toggle-${index + 1}`);
+// });
 
-for (i = 0; i < dataTriggers.length; i++) {
-  dataTriggers[i].addEventListener('click', function () {
-    var container = document.getElementById(this.dataset.trigger);
+// for (i = 0; i < dataTriggers.length; i++) {
+//   dataTriggers[i].addEventListener('click', function () {
+//     var container = document.getElementById(this.dataset.trigger);
 
-    if (!container.classList.contains('active')) {
-      container.classList.add('active');
-      container.style.height = 'auto';
+//     if (!container.classList.contains('active')) {
+//       container.classList.add('active');
+//       container.style.height = 'auto';
 
-      var height = container.clientHeight + 'px';
+//       var height = container.clientHeight + 'px';
 
-      container.style.height = '0px';
+//       container.style.height = '0px';
 
-      setTimeout(function () {
-        container.style.height = height;
-      }, 0);
-    } else {
-      container.style.height = '0px';
+//       setTimeout(function () {
+//         container.style.height = height;
+//       }, 0);
+//     } else {
+//       container.style.height = '0px';
 
-      container.addEventListener(
-        'transitionend',
-        function () {
-          container.classList.remove('active');
-        },
-        {
-          once: true,
-        }
-      );
-    }
-  });
-}
+//       container.addEventListener(
+//         'transitionend',
+//         function () {
+//           container.classList.remove('active');
+//         },
+//         {
+//           once: true,
+//         }
+//       );
+//     }
+//   });
+// }
+// --------------------------------------
+// проверка форм
+// $(document).ready(function () {
+//   validateForm()//своя
+//   function validateForm() {
+//     var inputName = $(this).attr('name');
+//     var val = $(this).val();
+//     $(this).closest('.input__wrap').addClass('focused');
+//     switch (inputName) {
+//       // Проверка поля "Имя"
+//       case 'name':
+//         // var rv_name = /^[а-яА-ЯёЁa-zA-Z0-9]+$/; // используем регулярное выражение
+//         if (val.length > 2 && val != '') {
+//           $(this).removeClass('error');
+//           $(this).addClass('not_error');
+//         }
+//         else if ($(this).val() == '') {
+//           $(this).closest('.input__wrap').removeClass('focused');
+//           $(this).removeClass('not_error').addClass('error');
+//         }
+//         else {
+//           $(this).removeClass('not_error').addClass('error');
+//         }
+//         break;
+//       // Проверка email
+//       case 'email':
+//         var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+//         if (val != '' && rv_email.test(val)) {
+//           $(this).removeClass('error');
+//           $(this).addClass('not_error');
+//         }
+//         else if ($(this).val() == '') {
+//           $(this).closest('.input__wrap').removeClass('focused');
+//           $(this).removeClass('not_error').addClass('error');
+//         }
+//         else {
+//           $(this).removeClass('not_error').addClass('error');
+//         }
+//         break;
+//       // Проверка поля "Телефон "
+//       case 'phone':
+//         if (val != '' && val.length >= 10) {
+//           $(this).removeClass('error');
+//           $(this).addClass('not_error');
+//         }
+//         else {
+//           $(this).removeClass('not_error');
+//           $(this).addClass('error');
+//         }
+//         break;
+//       // case 'phone':
+//       // 	var isValid = $(this).intlTelInput('isValidNumber');
+//       // 	if (isValid) {
+//       // 		console.log('valid');
+//       // 		$(this).removeClass('error');
+//       // 		$(this).addClass('not_error');
+//       // 	}
+//       // 	else {
+//       // 		console.log('not valid');
+//       // 		$(this).removeClass('not_error');
+//       // 		$(this).addClass('error');
+//       // 	}
+//       // 	break;
+//     }
+//   }
+// })
+
+// // проверка phon
+// function validateFieldNumber(inputElement, regex) {
+//   const inputValue = inputElement.val().trim();
+//   const isValidInput = regex.test(inputValue);
+//   inputElement.closest('.input__wrap').addClass('focused');
+//   if (isValidInput && inputValue !== '') {
+//     inputElement.removeClass('error').addClass('not_error');
+//   }
+//   else {
+//     inputElement.removeClass('not_error').addClass('error');
+//     if (inputValue == '') {
+//       inputElement.closest('.input__wrap').removeClass('focused');
+//     }
+//   }
+// }
+
+// function validateUaNumber(){
+//   var inputName = $(this).attr('name');
+//   const phoneRegex = /^\+?\d{10,}$/;
+//   const phoneUkRegex = /^(?:\+\s*(?:\d\s*){12}|\s*(?:\d\s*){12})$/;
+
+//       if ($(this).val().startsWith('+380') || $(this).val().startsWith('380')) {
+//     console.log('validateUaNumber');
+//           switch(inputName){
+//               case 'phone':
+//                   validateFieldNumber($(this), phoneUkRegex);
+//                   break;
+//           }
+//       } else { 
+//     validateFieldNumber($(this), phoneRegex); 
+//   } 
+// }
+// -----------------------------------
+// $(document).ready(function() {
+//   var input = document.querySelector("#phone");
+//   window.intlTelInput(input, {
+//       // настройки по умолчанию
+//       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+//   });
+// });
+
+// $(document).ready(function() {
+//   // Инициализация intl-tel-input
+//   var input = document.querySelector("#phone");
+//   var iti = window.intlTelInput(input, {
+//       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+//   });
+
+//   // Функция для применения маски ввода
+//   function applyInputMask() {
+//       var countryData = iti.getSelectedCountryData();
+//       var mask = getMaskForCountry(countryData.iso2);
+//       $(input).inputmask(mask);
+//   }
+
+//   // Пример функции для получения маски на основе страны
+//   function getMaskForCountry(countryCode) {
+//       var masks = {
+//           'us': '(999) 999-9999',
+//           'ru': '+7 (999) 999-99-99',
+//           // добавьте другие страны и их маски
+//       };
+//       return masks[countryCode] || '';
+//   }
+
+//   // Применение маски при изменении выбранной страны
+//   input.addEventListener("countrychange", applyInputMask);
+
+//   // Применение маски при загрузке страницы
+//   applyInputMask();
+// });
 
 // ('.questions__item').on('click', function () {
 //   $('.questions__text').toggleClass('active');
