@@ -190,6 +190,7 @@
 
   &__wrapper {
     margin-bottom: rem(10);
+    // position: relative;
   }
 
   &__button {
@@ -197,6 +198,7 @@
     @include adaptiveValue("padding-top", 12, 0);
     @include adaptiveValue("padding-left", 44, 20);
     @include adaptiveValue("padding-right", 44, 20);
+    position: relative;
   }
 
   &__subtext {
@@ -238,4 +240,52 @@
 .iti--separate-dial-code input[type=text],
 .iti--separate-dial-code input[type=tel] {
   @include adaptiveValue("padding-left", 75, 20);
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
+}
+
+.iti__selected-dial-code {
+  color: black;
+}
+
+.form__name {
+  color: red;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  bottom: 40%;
+  width: 395px;
+}
+
+.form__email {
+  color: red;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  bottom: 40%;
+  width: 395px;
+}
+
+.form__message {
+  color: green;
+  display: none;
+}
+
+.form__tel {
+  color: red;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  bottom: 40%;
+  width: 395px;
+}
+
+.form__input--email {
+  position: relative;
+}
+
+.form__label {
+  position: relative;
 }

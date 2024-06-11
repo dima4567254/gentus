@@ -95,17 +95,342 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  var input = document.querySelector("#tel");
+  var input = document.querySelector("#phone");
   window.intlTelInput(input, {
     initialCountry: "ua", // установка Украины по умолчанию
     placeholderNumberType: "none", // убрать пример номера
-    separateDialCode: false, //выключить код страны
+    separateDialCode: true, //выключить код страны
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
   });
 });
 
+// Задайте время отсчета в секундах (3 дня, 6 часов, 3 минуты и 15 секунд)
+let countdownTime = (3 * 24 * 60 * 60) + (6 * 60 * 60) + (3 * 60) + 15;
+
+// Получите элементы для отображения частей таймера
+const daysElement = document.getElementById('days');
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
+
+// Функция для обновления таймера
+function updateCountdown() {
+  // Вычислите дни, часы, минуты и секунды
+  const days = Math.floor(countdownTime / (24 * 60 * 60));
+  const hours = Math.floor((countdownTime % (24 * 60 * 60)) / 3600);
+  const minutes = Math.floor((countdownTime % 3600) / 60);
+  const seconds = countdownTime % 60;
+
+  // Обновите текстовое содержимое элементов
+  daysElement.textContent = days.toString().padStart(2, '0');
+  hoursElement.textContent = hours.toString().padStart(2, '0');
+  minutesElement.textContent = minutes.toString().padStart(2, '0');
+  secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+  // Уменьшите время на 1 секунду
+  countdownTime--;
+
+  // Если время истекло, остановите таймер
+  if (countdownTime < 0) {
+    clearInterval(timerInterval);
+    daysElement.textContent = "00";
+    hoursElement.textContent = "00";
+    minutesElement.textContent = "00";
+    secondsElement.textContent = "00";
+    document.getElementById('countdown').textContent = "Время вышло!";
+  }
+}
+
+// Обновляйте таймер каждую секунду
+const timerInterval = setInterval(updateCountdown, 1000);
+
+// Инициализируйте таймер при загрузке страницы
+updateCountdown();
+
+// ----------------------------------------------------====
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const phone = document.getElementById('phone');
+
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const phoneError = document.getElementById('phoneError');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let isValid = true;
+
+    if (name.value.trim() === '') {
+      nameError.style.display = 'block';
+      isValid = false;
+    } else {
+      nameError.style.display = 'none';
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+      emailError.style.display = 'block';
+      isValid = false;
+    } else {
+      emailError.style.display = 'none';
+    }
+
+    const phonePattern = /^\d{1,10}$/; // Регулярное выражение для проверки наличия только цифр и не более 10 символов
+    if (!phonePattern.test(phone.value)) {
+      phoneError.style.display = 'block';
+      isValid = false;
+    } else {
+      phoneError.style.display = 'none';
+    }
+
+    if (isValid) {
+      const formData = {
+        name: name.value,
+        email: email.value,
+        phone: phone.value
+      };
+
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.id) {
+            successMessage.style.display = 'block';
+            form.reset();
+          } else {
+            console.error(data);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+  });
+
+  // Hide error messages on input
+  // name.addEventListener('input', function () {
+  if (name.value.trim() !== '') {
+    nameError.style.display = 'none';
+  }
+  // });
+
+  // email.addEventListener('input', function () {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailPattern.test(email.value)) {
+    emailError.style.display = 'none';
+  }
+  // });
+
+  // phone.addEventListener('input', function () {
+  if (phone.value.trim() !== '') {
+    phoneError.style.display = 'none';
+  }
+  // });
+});
+// ------------------------------------------------------
+// вариант ии
+
+
+// document.getElementById('contactForm').addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+//   // Получаем элементы формы и сообщения об ошибках
+//   const name = document.getElementById('name');
+//   const email = document.getElementById('email');
+//   const phone = document.getElementById('phone');
+
+//   const nameError = document.getElementById('nameError');
+//   const emailError = document.getElementById('emailError');
+//   const phoneError = document.getElementById('phoneError');
+//   const successMessage = document.getElementById('successMessage');
+//   // console.log(successMessage);
+
+//   // Флаг валидности формы
+//   let isValid = true;
+
+//   // Проверка имени
+//   if (name.value.trim() === '') {
+//     nameError.style.display = 'block';
+//     isValid = false;
+//   } else {
+//     nameError.style.display = 'none';
+//   }
+
+//   // Проверка email
+//   // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   // if (!emailPattern.test(email.value)) {
+//   //   emailError.style.display = 'block';
+//   //   isValid = false;
+//   // } else {
+//   //   emailError.style.display = 'none';
+//   // }
+
+//   // Проверка телефона
+//   // const phonePattern = /^[0-9]{10,15}$/; // Проверяет, что телефон состоит только из цифр и имеет длину от 10 до 15 символов
+//   // if (!phonePattern.test(phone.value)) {
+//   //   phoneError.style.display = 'block';
+//   //   isValid = false;
+//   // } else {
+//   //   phoneError.style.display = 'none';
+//   // }
+
+//   // Если форма валидна, отправить данные на сервер
+//   if (isValid) {
+//     const formData = {
+//       name: name.value,
+//       email: email.value,
+//       phone: phone.value
+//     };
+
+//     fetch('/submit-form', { // Замените '/submit-form' на URL вашего сервера
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(formData)
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       if (data.success) {
+//         successMessage.style.display = 'block';
+//         successMessage.textContent = 'Форма успешно отправлена!';
+//         console.log('work');
+//         // Очистить форму
+//         name.value = '';
+//         email.value = '';
+//         phone.value = '';
+//       } else {
+//         successMessage.style.display = 'none';
+//         // Обработать ошибки сервера, если они есть
+//         console.error(data.error);
+//       }
+//     })
+//     .catch(error => {
+//       successMessage.style.display = 'none';
+//       console.error('Ошибка при отправке формы:', error);
+//     });
+//   } else {
+//     successMessage.style.display = 'none';
+//   }
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const form = document.getElementById('contactForm');
+//   const name = document.getElementById('name');
+//   const email = document.getElementById('email');
+//   const phone = document.getElementById('phone');
+
+//   const nameError = document.getElementById('nameError');
+//   const emailError = document.getElementById('emailError');
+//   const phoneError = document.getElementById('phoneError');
+//   const successMessage = document.getElementById('successMessage');
+
+//   if (form) {
+//     form.addEventListener('submit', function(event) {
+//       event.preventDefault();
+
+//       let isValid = true;
+
+//       // Проверка имени
+//       if (name.value.trim() === '') {
+//         nameError.style.display = 'block';
+//         isValid = false;
+//       } else {
+//         nameError.style.display = 'none';
+//       }
+
+//       // Проверка email
+//       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//       if (!emailPattern.test(email.value)) {
+//         emailError.style.display = 'block';
+//         isValid = false;
+//       } else {
+//         emailError.style.display = 'none';
+//       }
+
+//       // Проверка телефона
+//       const phonePattern = /^[0-9]{10,15}$/;
+//       if (!phonePattern.test(phone.value)) {
+//         phoneError.style.display = 'block';
+//         isValid = false;
+//       } else {
+//         phoneError.style.display = 'none';
+//       }
+
+//       // Если форма валидна, отправить данные на сервер
+//       if (isValid) {
+//         const formData = {
+//           name: name.value,
+//           email: email.value,
+//           phone: phone.value
+//         };
+
+//         fetch('/submit-form', {
+//           method: 'POST',
+//           headers: {
+//             'Content-Type': 'application/json'
+//           },
+//           body: JSON.stringify(formData)
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+//           if (data.success) {
+//             successMessage.style.display = 'block';
+//             successMessage.textContent = 'Форма успешно отправлена!';
+//             // Очистить форму
+//             name.value = '';
+//             email.value = '';
+//             phone.value = '';
+//           } else {
+//             successMessage.style.display = 'none';
+//             console.error(data.error);
+//           }
+//         })
+//         .catch(error => {
+//           successMessage.style.display = 'none';
+//           console.error('Ошибка при отправке формы:', error);
+//         });
+//       } else {
+//         successMessage.style.display = 'none';
+//       }
+//     });
+
+//     // Добавляем слушатели событий input для скрытия ошибок при вводе
+//     name.addEventListener('input', function() {
+//       if (name.value.trim() !== '') {
+//         nameError.style.display = 'none';
+//       }
+//     });
+
+//     email.addEventListener('input', function() {
+//       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//       if (emailPattern.test(email.value)) {
+//         emailError.style.display = 'none';
+//       }
+//     });
+
+//     phone.addEventListener('input', function() {
+//       const phonePattern = /^[0-9]{10,15}$/;
+//       if (phonePattern.test(phone.value)) {
+//         phoneError.style.display = 'none';
+//       }
+//     });
+//   } else {
+//     console.error('Форма не найдена в DOM.');
+//   }
+// });
+// ------------------------------------------------------
 // function name(params) {
-//   // let buttonModal4 = 
+//   // let buttonModal4 =
 
 //   buttonModal4.addEventListener('click', () => {
 //   });
@@ -263,9 +588,9 @@ $(document).ready(function () {
 //                   validateFieldNumber($(this), phoneUkRegex);
 //                   break;
 //           }
-//       } else { 
-//     validateFieldNumber($(this), phoneRegex); 
-//   } 
+//       } else {
+//     validateFieldNumber($(this), phoneRegex);
+//   }
 // }
 // -----------------------------------
 // $(document).ready(function() {
@@ -544,7 +869,3 @@ $(document).ready(function () {
              ]
         });
        */
-
-
-
-

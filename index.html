@@ -8,9 +8,9 @@
   <!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
   <title>Gentus</title>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
   <!-- ///!!! -->
-   <!-- подклюсить css -->
+  <!-- подклюсить css -->
   <link rel="stylesheet" href="css/style.min.css?_v=20230727015200">
 </head>
 
@@ -2072,32 +2072,32 @@
             </div>
             <ul class="reserve__list">
               <li>
-                <span>
+                <span id="days">
                   03
                 </span>
                 <p>Дні</p>
               </li>
               <li>
-                <span>
+                <span id="hours">
                   06
                 </span>
                 <p>Годин</p>
               </li>
               <li>
-                <span>
+                <span id="minutes">
                   03
                 </span>
                 <p>Хвилин</p>
               </li>
               <li>
-                <span>
+                <span id="seconds">
                   15
                 </span>
                 <p>Секунд</p>
               </li>
             </ul>
           </div>
-          <div class="form">
+          <div class="form" id="contactForm">
             <div class="form__box">
               Знижки до
               <span>-50 %</span>
@@ -2112,25 +2112,30 @@
               </p>
             </div>
             <form class="form__wrapper">
-              <label class="sr-only" for="text">
-                Ваше ім’я та прізвище
+              <label class="form__label" for="text">
+                <input class="form__input form__input--name" id="name" type="text" name="name"
+                  placeholder="Ваше ім’я та прізвище">
+                <span class="form__name" id="nameError">
+                  Поле Ім'я обов'язково для заповнення.
+                </span>
               </label>
-              <input class="form__input form__input--name" id="text" type="text" name="name"
-                placeholder="Ваше ім’я та прізвище" required
-                oninvalid="this.setCustomValidity('введіть ваше прізвище')">
-              <label class="sr-only" for="email">
-                Ваш email
+              <label class="form__label" for="email">
+                <input class="form__input form__input--email" id="email" type="email" name="email"
+                  placeholder="Ваш email">
+                <span class="form__email" id="emailError">
+                  Введіть правильний email.
+                </span>
               </label>
-              <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="Ваш email"
-                required oninvalid="this.setCustomValidity('Введіть вашу пошту')">
-              <label class="sr-only" for="tel">
-                Номер телефону*
+              <label class="form__label" for="tel">
+                <input class="form__input form__input--tel" id="phone" type="tel" name="phone">
+                <span class="form__tel error-tel" id="phoneError">
+                  Введіть правильний номер телефона.
+                </span>
               </label>
-              <input class="form__input form__input--tel" id="tel" type="tel" name="tel" required
-                oninvalid="this.setCustomValidity('Введіть ваш телефон')">
               <button class="form__button button" type="submit">
                 Записатися на курс
               </button>
+              <div class="form__message" id="successMessage">Форма успешно отправлена!</div>
             </form>
             <div class="form__subtext">
               <p>Залишилось 5 місць із 25</p>
