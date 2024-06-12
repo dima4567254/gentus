@@ -1,13 +1,17 @@
-// .header {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: 200;
-// }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color:silver;
+  // overflow: hidden;
+  // display: none;
+}
 
 .header {
-  @include adaptiveValue("padding-top", 70, 20);
+  @include adaptiveValue("padding-top", 35, 20);
+  @include adaptiveValue("padding-bottom", 35, 20);
   // background-color: red;
   // display: flex;
   // justify-content: space-between;
@@ -49,6 +53,10 @@
 
 .menu {
   display: flex;
+
+  &__btn {
+    display: none;
+  }
 
   // &__logo {}
 
