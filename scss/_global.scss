@@ -51,7 +51,8 @@ body {
   padding: 0 15px;
 
   &--for-what {
-    max-width: 1210px;
+    // max-width: 1210px;
+    max-width: 1140px;
   }
 
   &--expertise {
@@ -92,27 +93,7 @@ body {
   font-size: rem(48);
   @include line-height(48, 60);
   font-weight: 700; //потом проверить проставлнгл ли
-  // font-size: 36px;
-  // text-align: center;
-  // letter-spacing: 0.04em;
-  // text-transform: uppercase;
-  // color: $black3;
 
-  // @media (max-width: 1200px) {
-  //     font-size: 34px;
-  // }
-
-  // @media (max-width: 992px) {
-  //     font-size: 32px;
-  // }
-
-  // @media (max-width: 768px) {
-  //     font-size: 30px;
-  // }
-
-  // @media (max-width: 576px) {
-  //     font-size: 26px;
-  // }
 }
 
 .section {
@@ -149,54 +130,7 @@ body {
   }
 }
 
-// .video {
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     display: block;
-//     position: relative;
-//     border-radius: 6px;
-//     transition: color 0.5s;
 
-//     &:focus {
-//         color: $focus;
-//     }
-
-//     &:hover {
-//         .video__icon {
-//             transition: background-color 0.5s;
-//             background-color: $red;
-//         }
-//     }
-
-//     &:active {
-//         color: $active;
-//     }
-
-//     &__icon {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translateX(-50%);
-//         width: 65px;
-//         height: 40px;
-//         background: rgba(0, 0, 0, .55);
-//         border-radius: 6px;
-//         position: relative;
-
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             top: 30%;
-//             left: 50%;
-//             transform: translateX(-50%);
-//             z-index: 100;
-//             border-color: transparent transparent transparent $white;
-//             border-style: solid;
-//             border-width: 9.5px 0 9.5px 17px;
-//         }
-//     }
-// }
 
 * {
   // scrollbar-width: auto;

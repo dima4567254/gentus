@@ -7,19 +7,19 @@
 
   &__images {
     width: 100%;
-    @include adaptiveValue(" margin-top", 100, 20);
+    @include adaptiveValue(" margin-top", 130, 20);
     background: linear-gradient(131.71deg, rgb(54, 37, 54) 10.762%, rgb(18, 18, 18) 43.452%);
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: end;
     position: relative;
+    max-width: rem(510);
 
     &::before {
       content: "";
       position: absolute;
-      transform: translateX(-50%); //только по вертикали ниже другое
-      left: -12%;
-      top: 0%;
+      left: -13%;
+      top: -4%;
       transform: translateY(-50%); //только по горизонтали
       width: rem(110);
       height: rem(170);
@@ -39,7 +39,8 @@
   }
 
   &__box {
-    max-width: 550px;
+    max-width: rem(550);
+    padding-top: rem(20);
   }
 
   &__title {
@@ -52,8 +53,9 @@
 
   &__subtitle {
     font-size: rem(28);
-    @include line-height(48, 60);
+    // @include line-height(48, 60);
     margin-bottom: rem(20);
+    line-height: 1.1;
   }
 
   &__text {
@@ -63,6 +65,8 @@
   }
 
   &__text p {
+    letter-spacing: .4px;
+
     &:not(:last-child) {
       margin-bottom: rem(20);
     }
@@ -70,5 +74,6 @@
 
   &__text span {
     opacity: .7;
+    letter-spacing: -0.1px;
   }
 }

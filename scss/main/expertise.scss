@@ -17,8 +17,12 @@
     font-weight: 400;
     @include line-height(20, 26);
     text-align: center;
-    max-width: 540px;
+    max-width: rem(545);
     margin: 0 auto;
+  }
+
+  &__text p {
+    letter-spacing: -0.2px;
   }
 
   &__items {
@@ -50,14 +54,19 @@
   }
 
   &__subtitle {
-    @include adaptiveValue("margin-bottom", 40, 20);
+    @include adaptiveValue("margin-bottom", 30, 20);
+    font-size: rem(24);
   }
 
   &__subtext {
     margin-bottom: rem(20);
+    letter-spacing: -0.2px;
   }
 
   &__subtext span {
+    display: block;
+    max-width:rem(260);
+    margin: 0 auto;
     margin-bottom: rem(10);
   }
 }

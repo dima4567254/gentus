@@ -4,11 +4,11 @@
     justify-content: space-between;
     border-radius: 32px;
     background: radial-gradient(1981.91% 141.42% at 0% 100%, rgb(80, 71, 64), rgb(92, 67, 89) 16.363%, rgb(56, 43, 63) 42.194%, rgb(23, 23, 23) 100%);
-    @include adaptiveValue("padding-bottom", 70, 20);
-    @include adaptiveValue("padding-top", 70, 20);
+    @include adaptiveValue("padding-bottom", 45, 20);
+    @include adaptiveValue("padding-top", 80, 20);
     @include adaptiveValue("padding-left", 105, 20);
     @include adaptiveValue("padding-right", 105, 20);
-    @include adaptiveValue("gap", 140, 20);
+    gap: rem(20);
   }
 
   &__left {
@@ -27,24 +27,27 @@
     display: flex;
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 40, 20);
+      @include adaptiveValue("margin-bottom", 25, 20);
     }
   }
 
   &__inner p {
-    max-width: 380px;
+    max-width: rem(470);
+    font-size: rem(20);
+    letter-spacing: -0.4px;
   }
 
   &__svg {
-    margin-right: 10px;
+    margin-right: rem(15);
+    min-width: rem(17);
   }
 
-  &__text {}
+  // &__text {}
 
-  &__text p {}
+  // &__text p {}
 
   &__text span {
-    margin-bottom: rem(25);
+    margin-bottom: rem(30);
     display: block;
     font-size: rem(20);
   }
@@ -53,16 +56,15 @@
     max-width: 400px;
   }
 
-  &__items {}
+  // &__items {}
 
   &__item {
     display: flex;
     align-items: center;
     @include adaptiveValue("margin-bottom", 30, 20);
-    // padding-top: rem(15);
   }
 
-  &__svg {}
+  // &__svg {}
 
   &__icon {
     @include adaptiveValue("margin-right", 25, 20);

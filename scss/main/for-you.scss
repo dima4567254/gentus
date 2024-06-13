@@ -2,7 +2,7 @@
   &__wrapper {
     border-radius: 32px;
     background: rgb(33, 33, 33);
-    @include adaptiveValue("padding-bottom", 140, 20);
+    @include adaptiveValue("padding-bottom", 60, 20);
     @include adaptiveValue("padding-top", 80, 20);
     @include adaptiveValue("padding-left", 105, 10);
     @include adaptiveValue("padding-right", 105, 10);
@@ -30,19 +30,18 @@
 
   &__item {
     text-align: center;
-    // padding: 40px 20px 60px 20px;
     @include adaptiveValue("padding-bottom", 60, 20);
     @include adaptiveValue("padding-top", 40, 20);
-    @include adaptiveValue("padding-left", 20, 10);
+    @include adaptiveValue("padding-left", 15, 10);
     @include adaptiveValue("padding-right", 20, 10);
     border-radius: 20px;
     backdrop-filter: blur(16px);
     background: rgba(24, 23, 29, 0.7);
-    max-width: 240px;
+    max-width: rem(240);
   }
 
   &__svg {
-    @include adaptiveValue("margin-bottom", 25, 20);
+    margin-bottom: rem(20);
   }
 
   &__subtitle {
@@ -51,7 +50,12 @@
     @include adaptiveValue("margin-bottom", 25, 20);
   }
 
+  &__subtitle span {
+    display: block;
+  }
+
   &__text {
     font-weight: 400;
+    opacity: 0.7;
   }
 }
