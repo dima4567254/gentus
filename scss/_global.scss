@@ -26,7 +26,7 @@ body {
   background-repeat: no-repeat;
   background-position: 0 -204px;
   background-size: cover;
-  z-index: 999;
+  z-index: 100;
 }
 
 .sr-only {
@@ -47,6 +47,7 @@ body {
 
 .container {
   max-width: 1260px;
+  // max-width: 1245px;
   margin: 0 auto;
   padding: 0 15px;
 
@@ -132,11 +133,11 @@ body {
 
 
 
-* {
-  // scrollbar-width: auto;
-  scrollbar-color: #C0C0C0 #EFEFF1;
-  //для потдержки скрола в фарфокс
-}
+// * {
+//   // scrollbar-width: auto;
+//   scrollbar-color: #C0C0C0 #EFEFF1;
+//   //для потдержки скрола в фарфокс
+// }
 
 // footer__link--indent
 
@@ -160,3 +161,52 @@ body {
 // .jq-ry-container {
 //   // margin: 0 auto rem(25);
 // }
+
+// * {
+//   scrollbar-color: silver #efeff1;
+// }
+
+
+
+.tabs__left::-webkit-scrollbar {
+  /* 1 - скроллбар */
+  width: 6px;
+  height: 4px;
+  // background-color: red;
+  // border-radius: 20px;
+}
+
+::-webkit-scrollbar-button {
+  // background-color: yellow;
+    /* 2 - кнопка */
+    // background-color: #fee301;
+}
+
+// ::-webkit-scrollbar-track {
+//     /* 3 - трек */
+//     background-color: green;
+// }
+
+::-webkit-scrollbar-track-piece {
+    /* 4 - видимая часть трека */
+    background-color: #E6E6E6;
+}
+
+::-webkit-scrollbar-thumb {
+  // /* 5 - ползунок */
+  // border-radius: 2px;
+  background-color: #B4B4B4;
+  border-radius: 20px;
+}
+
+// ::-webkit-scrollbar-corner {
+//     /* 6 - уголок */
+//     background-color: #01d8fe;
+// }
+
+// ::-webkit-resizer {
+//   background-color: #fe01d8;
+//     /* 7 - изменение размеров */
+// }
+// --------------------
+

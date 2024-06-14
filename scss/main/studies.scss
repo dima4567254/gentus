@@ -15,6 +15,10 @@
     max-width: rem(405)
   }
 
+  &__left {
+    padding-top: rem(10);
+  }
+
   &__title {
     @include adaptiveValue("margin-bottom", 30, 20);
     max-width: rem(450);
@@ -34,12 +38,19 @@
 
   &__subtext span {
     opacity: 0.7;
+    letter-spacing: -0.5px
+  }
+
+  &__color {
+    display: inline;
+    letter-spacing: -0.3px;
   }
 
   &__items {
     display: flex;
     justify-content: space-between;
-    @include adaptiveValue("gap", 50, 20);
+    gap: rem(20);
+    max-width: rem(305);
   }
 
   &__item {
@@ -80,7 +91,7 @@
 
   &__wrapper {
     display: flex;
-    @include adaptiveValue("gap", 25, 20);
+    gap: rem(20);
   }
 
   &__left {
@@ -88,7 +99,8 @@
     counter-reset: item-counter;
     width: 100%;
     height: rem(840);
-    overflow: scroll;
+    // overflow: scroll;
+    overflow-y: scroll;
   }
 
   &__number {
@@ -112,9 +124,9 @@
   }
 
   &__link {
-    @include adaptiveValue("padding-bottom", 32, 20);
-    @include adaptiveValue("padding-top", 32, 20);
-    @include adaptiveValue("padding-left", 10, 0);
+    @include adaptiveValue("padding-bottom", 27, 20);
+    @include adaptiveValue("padding-top", 27, 20);
+    @include adaptiveValue("padding-left", 15, 0);
     color: #666666;
     font-size: rem(18);
     font-weight: 400;
@@ -132,6 +144,7 @@
 
   &__link span {
     max-width: rem(380);
+    letter-spacing: 0.4px;
   }
 
   &__right {
@@ -151,11 +164,12 @@
     font-size: rem(24);
     font-weight: 700;
     color: rgb(0, 0, 0);
-    @include adaptiveValue("margin-bottom", 30, 20);
+    @include adaptiveValue("margin-bottom", 35, 20);
   }
 
   &__items {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     max-width: rem(595);
     @include adaptiveValue("margin-bottom", 30, 20);
