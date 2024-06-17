@@ -26,9 +26,9 @@
     background-color: #2A2A2A;
     @include adaptiveValue("margin-bottom", 40, 20);
     display: flex;
-    @include adaptiveValue("padding-bottom", 20, 10);
+    @include adaptiveValue("padding-bottom", 30, 20);
     @include adaptiveValue("padding-top", 25, 20);
-    @include adaptiveValue("padding-left", 30, 20);
+    @include adaptiveValue("padding-left", 20, 0);
     @include adaptiveValue("padding-right", 20, 10);
   }
 
@@ -45,9 +45,9 @@
       position: absolute;
       right: 0;
       height: rem(44);
-      top: 50%;
+      top: 51%;
       transform: translateY(-50%); //только по горизонтали
-      border: 2px solid rgb(139, 87, 194);
+      border: 1px solid rgb(139, 87, 194);
       z-index: 100;
     }
   }
@@ -56,7 +56,7 @@
     max-width: rem(365);
     background: rgb(239, 133, 236);
     display: block;
-    width: 30%;
+    width: 31%;
     height: rem(24);
     position: relative;
 
@@ -67,7 +67,7 @@
       height: rem(44);
       top: 50%;
       transform: translateY(-50%); //только по горизонтали
-      border: 2px solid rgb(239, 133, 236);
+      border: 1px solid rgb(239, 133, 236);
     }
   }
 
@@ -96,7 +96,6 @@
   }
 
   &__numbers {
-    // padding: 13px 4px;
     padding-top: rem(13);
     padding-bottom: rem(13);
     padding-left: rem(4);

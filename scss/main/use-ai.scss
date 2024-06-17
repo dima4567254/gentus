@@ -14,8 +14,13 @@
     @include line-height(20, 26);
     text-align: center;
     @include adaptiveValue("margin-bottom", 40, 20);
-    max-width: rem(915);
+    max-width: rem(893);
     margin: 0 auto;
+    letter-spacing: 0.5px;
+  }
+
+  &__info span {
+    letter-spacing: 0;
   }
 
   &__subtext span,
@@ -27,18 +32,21 @@
     display: flex;
     justify-content: center;
     gap: rem(20);
-    @include adaptiveValue("margin-bottom", 135, 30);
+    @include adaptiveValue("margin-bottom", 70, 20);
   }
 
   &__item {
-    padding: 40px;
+    @include adaptiveValue("padding-bottom", 40, 20);
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-left", 40, 20);
+    @include adaptiveValue("padding-right", 35, 2);
     border-radius: 32px;
     background: radial-gradient(565.82% 141.42% at 0% 100%, rgb(80, 71, 64), rgb(92, 67, 89) 16.363%, rgb(56, 43, 63) 42.194%, rgb(23, 23, 23) 100%);
     @include adaptiveValue("margin-bottom", 25, 20);
   }
 
   &__svg {
-    @include adaptiveValue("margin-bottom", 25, 20);
+    @include adaptiveValue("margin-bottom", 20, 0);
   }
 
   &__subtitle {
@@ -51,6 +59,7 @@
 
   &__text {
     max-width: rem(320);
+    letter-spacing: -0.3px;
   }
 
   &__subtext {
@@ -60,6 +69,7 @@
     text-align: center;
     font-size: rem(20);
     font-weight: 400;
+    letter-spacing: 0.4px;
 
     &::before {
       content: "";
@@ -76,5 +86,9 @@
       background-size: cover;
       z-index: -1;
     }
+  }
+
+  &__subtext span{
+    letter-spacing: 0px;
   }
 }
