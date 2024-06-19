@@ -1,4 +1,8 @@
 
+$('.menu__link, .menu__btn').on('click', function () {
+  $('.menu__items, .menu__btn').toggleClass('active');
+});
+
 $(".intro__star").rateYo({
   rating: 4.7,
   starWidth: "24px",

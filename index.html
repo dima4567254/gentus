@@ -158,35 +158,37 @@
             </div>
           </div>
           <div class="intro__right">
-            <picture>
+            <picture class="intro__picture">
               <source srcset="images/dist/main.avif" type="image/avif">
               <source srcset="images/dist/main.webp" type="image/webp"><img class="intro__img"
                 src="images/dist/main.png" alt="AI спеціаліст">
-            </picture>
-            <div class="intro__speakers">
-              <div class="intro__inner">
-                <div class="intro__pretext">ТОП спікери</div>
-                <picture>
-                  <source srcset="images/dist/avatar1.avif" type="image/avif">
-                  <source srcset="images/dist/avatar1.webp" type="image/webp"><img class="intro__images"
-                    src="images/dist/avatar1.jpeg" alt="фотографія дівчини">
-                </picture>
-                <picture>
-                  <source srcset="images/dist/avatar3.avif" type="image/avif">
-                  <source srcset="images/dist/avatar3.webp" type="image/webp"><img class="intro__images"
-                    src="images/dist/avatar3.jpeg" alt="фотографія чоловіка">
-                </picture>
-                <picture>
-                  <source srcset="images/dist/avatar2.avif" type="image/avif">
-                  <source srcset="images/dist/avatar2.webp" type="image/webp"><img class="intro__images"
-                    src="images/dist/avatar2.jpeg" alt="фотографія дівчини">
-                </picture>
+              <div class="intro__speakers">
+                <div class="intro__inner">
+                  <div class="intro__pretext">ТОП спікери</div>
+                  <picture>
+                    <source srcset="images/dist/avatar1.avif" type="image/avif">
+                    <source srcset="images/dist/avatar1.webp" type="image/webp"><img class="intro__images"
+                      src="images/dist/avatar1.jpeg" alt="фотографія дівчини">
+                  </picture>
+                  <picture>
+                    <source srcset="images/dist/avatar3.avif" type="image/avif">
+                    <source srcset="images/dist/avatar3.webp" type="image/webp"><img class="intro__images"
+                      src="images/dist/avatar3.jpeg" alt="фотографія чоловіка">
+                  </picture>
+                  <picture>
+                    <source srcset="images/dist/avatar2.avif" type="image/avif">
+                    <source srcset="images/dist/avatar2.webp" type="image/webp"><img class="intro__images"
+                      src="images/dist/avatar2.jpeg" alt="фотографія дівчини">
+                  </picture>
+                </div>
               </div>
-            </div>
+            </picture>
+
           </div>
         </div>
+      </div>
     </section>
-
+    <!--
     <section class="for-what section">
       <div class="container container--for-what">
         <div class="for-what__wrapper">
@@ -727,10 +729,8 @@
           </div>
           <div class="studies__right">
             <div class="studies__subtext">
-              <!-- <p> -->
               <div class="studies__color">Ви отримаєте</div>
               <span>структуровані знання,</span>
-              <!-- </p> -->
               <p>
                 <span>
                   тотальну практику та досвід
@@ -1661,7 +1661,7 @@
                 <p>
                   По завершенню курсу у вас є можливість отримати диплом, який буде
                   <span>
-                    видаватися на основі вашої успішності у виконанні 
+                    видаватися на основі вашої успішності у виконанні
                   </span>
                   <span class="awaits-you__diploma">
                     домашніх завдань та результатів тестування.
@@ -1677,7 +1677,7 @@
     <section class="result section">
       <div class="container">
         <h2 class="result__title title">
-          Ми разом = 
+          Ми разом =
           <span> 100% результат</span>
         </h2>
         <div class="result__text">
@@ -1808,7 +1808,7 @@
         </h2>
         <div class="use-ai__info">
           <p>
-            <span>Штучний інтелект  поступово входить в онлайн професії,</span>
+            <span>Штучний інтелект поступово входить в онлайн професії,</span>
             змінюючи підходи і підвищуючи ефективність в різних сферах.
             <span>
               Поговоримо про те, як ШІ перетворює онлайн професії, такі як SMM-менеджер, веб-дизайнер і програміст.
@@ -1843,8 +1843,10 @@
             <div class="use-ai__text">
               <p>
                 ШІ може аналізувати користувацькі дані та поведінку на сайті, надаючи важливу інформацію для оптимізації
-                дизайну. Він також може створювати персоналізовані веб-сайти для кожного користувача на основі їхніх
-                інтересів і попереднього досвіду.
+                дизайну. Він також може створювати персоналізовані веб-сайти для кожного користувача на основі
+              </p>
+              <p>
+                їхніх інтересів і попереднього досвіду.
               </p>
             </div>
           </li>
@@ -1884,8 +1886,8 @@
         <div class="employment__wrapper">
           <div class="employment__left">
             <h2 class="employment__title title">
-              Ми допомагаємо з 
-              <span>працевлаштуванням</span>
+              <span>Ми допомагаємо</span>
+              з <span>працевлаштуванням</span>
             </h2>
             <ul class="employment__items">
               <li class="employment__item">
@@ -1893,7 +1895,7 @@
                   <use xlink:href="images/sprite.svg#certified">
                   </use>
                 </svg>
-                <div class="employment__text">
+                <div class="employment__text employment__text--receive">
                   <p>
                     <span>
                       Ви отримуєте 
@@ -1910,7 +1912,7 @@
                   <use xlink:href="images/sprite.svg#qr">
                   </use>
                 </svg>
-                <div class="employment__text">
+                <div class="employment__text employment__text--diploma">
                   <p>
                     Кожен диплом має 
                     <span>
@@ -1930,8 +1932,7 @@
                   <use xlink:href="images/sprite.svg#course">
                   </use>
                 </svg>
-
-                <div class="employment__text">
+                <div class="employment__text employment__text--students">
                   <p>
                     <span>Усі студенти матимуть доступ до</span>
                     закритого курсу з працевлаштування "Genius Talents".
@@ -1993,8 +1994,8 @@
         <div class="nstallment__wrapper">
           <div class="nstallment__info">
             <h2 class="nstallment__title title">
-              <span>Розстрочка без переплат </span>
-              від Genius.Space
+              <span>Розстрочка без переплат</span>
+              <span>від Genius.Space</span>
             </h2>
             <div class="nstallment__text">
               <p>
@@ -2095,7 +2096,7 @@
               Секція опис курсу та відправлення форми
             </h2>
             <div class="reserve__title">
-              AI
+              <span>AI</span>
               <span>спеціаліст</span>
             </div>
             <div class="reserve__info">
@@ -2160,7 +2161,7 @@
               </p>
             </div>
             <form class="form__wrapper">
-              <label class="form__label" for="text">
+              <label class="form__label" for="name">
                 <input class="form__input form__input--name" id="name" type="text" name="name"
                   placeholder="Ваше ім’я та прізвище">
                 <span class="form__name" id="nameError">
@@ -2174,7 +2175,7 @@
                   Введіть правильний email.
                 </span>
               </label>
-              <label class="form__label" for="tel">
+              <label class="form__label" for="phone">
                 <input class="form__input form__input--tel" id="phone" type="tel" name="phone">
                 <span class="form__tel" id="phoneError">
                   Введіть правильний номер телефона.
@@ -2206,8 +2207,8 @@
     <section class="reviews section">
       <div class="container container--reviews">
         <h2 class="reviews__title title">
-          <span> Що говорять студенти</span>
-           про навчання у Genius.Space
+          <span>Що говорять студенти</span>
+          <span>про навчання у Genius.Space</span>
         </h2>
         <ul class="reviews-slider">
           <li class="reviews-slider__item">
@@ -2661,11 +2662,11 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
-  <script src="js/avif.js"></script>
-  <script src="js/main.min.js?_v=20230727015200"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <script src="js/avif.js"></script>
+    <script src="js/main.min.js?_v=20230727015200"></script>
 
 </body>
 

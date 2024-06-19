@@ -19,7 +19,6 @@
   &__item {
     cursor: pointer;
     min-height: rem(90);
-    // height: auto;
     border-radius: 10px;
     background: rgb(53, 53, 53);
     align-items: center;
@@ -36,10 +35,10 @@
     @include line-height(20, 26);
   }
 
-  &__wrap {
-    // display: flex;
-    // align-items: center;
-  }
+  // &__wrap {
+  //   // display: flex;
+  //   // align-items: center;
+  // }
 
   &__inner {
     display: flex;
@@ -77,168 +76,5 @@
 
 
 .active {
-  // display: flex;
   align-items: inherit;
 }
-
-// Base styling above
-
-// Style the theme toggle
-// .theme-toggle {
-//   position: relative;
-//   width: 55px;
-//   height: 30px;
-//   background-color: var(--md);
-//   border-radius: 100px;
-//   display: flex;
-//   justify-content: flex-start;
-//   transition: box-shadow var(--trans-dur) ease-in-out;
-//   overflow: hidden;
-//   cursor: pointer;
-//   margin: 30px auto;
-
-//   .sun-moon {
-//     width: 23px;
-//     height: 23px;
-//     border-radius: 100px;
-//     background-color: white;
-//     transform: translate(4px, 3px);
-//     transition: transform 0.3s ease-in-out;
-
-//     &::after,
-//     .eclipse {
-//       position: absolute;
-//       content: '';
-//       width: 23px;
-//       height: 23px;
-//       border-radius: 100px;
-//       background-color: var(--primary);
-//       position: absolute;
-//       top: 0;
-//       left: 90px;
-//       z-index: 1;
-//     }
-
-//     .eclipse {
-//       background-color: var(--md);
-//       z-index: 2;
-//       transform: translateX(23px);
-//       transition-property: transform;
-//       transition-duration: 0.25s;
-//     }
-//   }
-
-//   &.enabled {
-//     .sun-moon {
-//       transform: translate(-61px, 3px);
-
-//       .eclipse {
-//         transition-property: transform;
-//         transition-duration: 0.5s;
-//         transition-delay: 0.5s;
-//         transform: translateX(13px);
-//       }
-//     }
-//   }
-
-//   &:hover,
-//   &:focus {
-//     outline: none;
-//     box-shadow: 0 0 0 3px var(--primary);
-//   }
-// }
-
-// Style the accordion triggers
-
-
-
-
-// button.accordion__button {
-//   background-color: var(--primary);
-//   color: var(--fg);
-//   font-size: 1em;
-//   line-height: 1.3;
-//   padding: 1em;
-//   border-radius: var(--border-r);
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   transition: all var(--trans-dur) ease-in-out;
-//   text-align: left;
-
-//   .chevron {
-//     display: block;
-//     width: 30px;
-//     height: 30px;
-//     flex-shrink: 0;
-//     margin-left: 20px;
-
-//     &__container {
-//       transform: translateY(13px);
-//       transition: var(--trans-dur) ease-in-out;
-//     }
-
-//     &__line {
-//       stroke: var(--fg);
-//       stroke-width: 6px;
-//       stroke-linecap: round;
-//       transform-origin: 50px 50px;
-//       transition: var(--trans-dur) ease-in-out;
-
-//       &--1 {
-//         transform: rotate(40deg);
-//       }
-
-//       &--2 {
-//         transform: rotate(-40deg);
-//       }
-//     }
-//   }
-
-//   &.active {
-//     border-radius: var(--border-r) var(--border-r) 0 0;
-
-//     .chevron {
-//       &__container {
-//         transform: translateY(0);
-//       }
-
-//       &__line {
-//         &--1 {
-//           transform: rotate(0deg) scaleX(70%);
-//         }
-
-//         &--2 {
-//           transform: rotate(0deg) scaleX(70%);
-//         }
-//       }
-//     }
-//   }
-
-//   + * + * {
-//     margin-top: 30px;
-//   }
-
-//   &:hover,
-//   &:focus {
-//     outline: none;
-//     box-shadow: inset 0 0 0 3px var(--focus);
-//   }
-// }
-
-// // Style the accordion content
-// .accordion__content {
-//   background-color: var(--md);
-//   transition: height var(--trans-dur) ease-in-out;
-//   overflow: hidden;
-//   border-radius: 0 0 var(--border-r) var(--border-r);
-
-//   .inner-liner {
-//     padding: 30px;
-//   }
-
-//   &:not(.active) {
-//     display: none;
-//   }
-// }

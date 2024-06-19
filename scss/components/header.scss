@@ -1,20 +1,12 @@
 .header {
+  @include adaptiveValue("padding-top", 35, 20);
+  @include adaptiveValue("padding-bottom", 35, 20);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 200;
-  background-color:silver;
-  // overflow: hidden;
-  // display: none;
-}
-
-.header {
-  @include adaptiveValue("padding-top", 35, 20);
-  @include adaptiveValue("padding-bottom", 35, 20);
-  // background-color: red;
-  // display: flex;
-  // justify-content: space-between;
+  background-color: silver;
 
   &__wrapper {
     display: flex;
@@ -25,9 +17,8 @@
   &__btn {
     background-color: transparent;
     font-weight: 400;
-    // padding: 12px 44px;
-    @include adaptiveValue("padding-bottom", 12, 0);
-    @include adaptiveValue("padding-top", 12, 0);
+    @include adaptiveValue("padding-bottom", 12, 10);
+    @include adaptiveValue("padding-top", 12, 10);
     @include adaptiveValue("padding-left", 44, 20);
     @include adaptiveValue("padding-right", 44, 20);
     box-sizing: border-box;
@@ -53,26 +44,156 @@
 
 .menu {
   display: flex;
+  order: 1;
 
   &__btn {
     display: none;
+
+
+    @media (max-width: 992px) {
+      width: 30px;
+      height: 22px;
+      position: relative;
+      border: none;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      padding: 0;
+      z-index: 10;
+
+      span,
+      &::before,
+      &::after {
+        transition: all .5s;
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 100%;
+        background-color: $btn-menu;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      &.active span {
+        transform: scale(0);
+      }
+
+      &.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+
+      &.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+    }
   }
-
-  // &__logo {}
-
-  // &__btn {}
 
   &__items {
     display: flex;
     justify-content: center;
     @include adaptiveValue("gap", 40, 20);
+
+    @media (max-width: 992px) {
+      transform: translateY(-200%);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      background-color: #edf1f4;
+      transition: transform 1s;
+      @include adaptiveValue("padding-bottom", 55, 20);
+      @include adaptiveValue("padding-top", 20, 0);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &.active {
+        transform: translateY(0%);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 47%;
+        top: 50%;
+        transform: translateY(-63%) translateX(-50%);
+        height: 10rem;
+        width: 45.5rem;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+      }
+    }
   }
 
-  // &__item {}
+  &__item {
+    @media (max-width: 992px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: rem(20);
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      // @media (min-width: 768px) {
+      //   margin-bottom: 0;
+      // }
+    }
+  }
 
   &__link {
-    font-size: 14px;
     transition: color .5s;
+    color: $black;
+
+    @media (max-width: 992px) {
+      display: block;
+      font-size: rem(20);
+
+      @media (min-width: 1200px) {
+        color: rgb(113, 93, 0);
+        @include line-height(20, 23);
+        letter-spacing: 0%;
+        text-decoration: underline 1px solid;
+        text-transform: uppercase;
+        transition: color .5s;
+      }
+
+      &:focus {
+        color: $focus;
+      }
+
+      &:hover {
+        color: $ac;
+      }
+
+      &:active {
+        color: $active;
+      }
+    }
 
     &:focus {
       color: $focus;
@@ -86,10 +207,4 @@
       color: $active;
     }
   }
-}
-
-.logo__menu {
-  width: rem(84);
-  height: rem(34);
-  object-fit: cover;
 }
