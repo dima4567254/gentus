@@ -1,18 +1,18 @@
-html {
-  font-size: 62.5%;
+// html {
+//   font-size: 62.5%;
 
-  @media (max-width: 1200px) {
-    font-size: 40%;
-  }
+//   @media (max-width: 1200px) {
+//     font-size: 40%;
+//   }
 
-  @media (max-width: 768px) {
-    font-size: 30%;
-  }
+//   @media (max-width: 768px) {
+//     font-size: 30%;
+//   }
 
-  @media (max-width: 576px) {
-    font-size: 65%;
-  }
-}
+//   // @media (max-width: 576px) {
+//   //   font-size: 65%;
+//   // }
+// }
 
 html,
 body {
@@ -93,9 +93,13 @@ body {
 // }
 
 .title {
-  font-size: rem(48);
+  font-size: 48px;
   @include line-height(48, 60);
   font-weight: 700; //потом проверить проставлнгл ли
+
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
 
 }
 
