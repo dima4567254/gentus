@@ -104,8 +104,10 @@ body {
 }
 
 .section {
-  @include adaptiveValue("padding-top", 60, 65);
-  @include adaptiveValue("padding-bottom", 60, 65);
+  // @include adaptiveValue("padding-top", 60, 65);
+  // @include adaptiveValue("padding-bottom", 60, 65);
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 
 .logo {

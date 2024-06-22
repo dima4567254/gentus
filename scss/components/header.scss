@@ -1,6 +1,7 @@
 .header {
-  @include adaptiveValue("padding-top", 35, 20);
-  @include adaptiveValue("padding-bottom", 35, 20);
+  padding-bottom: 20px;
+  //потом проверить по пп
+  padding-top: 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,15 +18,19 @@
   &__btn {
     background-color: transparent;
     font-weight: 400;
-    @include adaptiveValue("padding-bottom", 12, 10);
-    @include adaptiveValue("padding-top", 12, 10);
-    @include adaptiveValue("padding-left", 44, 20);
-    @include adaptiveValue("padding-right", 44, 20);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 44px;
+    padding-right: 44px;
     box-sizing: border-box;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     color: rgb(255, 255, 255);
     transition: color .5s;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
 
     &:focus {
       color: $focus;
@@ -48,7 +53,6 @@
 
   &__btn {
     display: none;
-
 
     @media (max-width: 992px) {
       width: 30px;
@@ -118,8 +122,8 @@
       z-index: 5;
       background-color: #edf1f4;
       transition: transform 1s;
-      @include adaptiveValue("padding-bottom", 55, 20);
-      @include adaptiveValue("padding-top", 20, 0);
+      padding-bottom: 55px;
+      padding-top: 20px;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -138,8 +142,8 @@
         left: 47%;
         top: 50%;
         transform: translateY(-63%) translateX(-50%);
-        height: 10rem;
-        width: 45.5rem;
+        height: 100px;
+        width: 455px;
         background-image: none;
         background-repeat: no-repeat;
         background-position: center;
@@ -153,30 +157,20 @@
     @media (max-width: 992px) {
       width: 100%;
       text-align: center;
-      margin-bottom: rem(20);
+      margin-bottom: 20px;
 
       &:not(:last-child) {
         margin-right: 0;
       }
-
-      // @media (min-width: 768px) {
-      //   margin-bottom: 0;
-      // }
     }
   }
 
   &__link {
     transition: color .5s;
-    // color: $black;
-    // color: rgb(113, 93, 0);
     color: $black;
     @include line-height(20, 23);
     letter-spacing: 0%;
-    // text-decoration: underline 1px solid;
     text-transform: uppercase;
-
-    // @media (max-width: 1200px) {
-
 
     @media (max-width: 992px) {
       display: block;
@@ -194,7 +188,5 @@
     &:active {
       color: $active;
     }
-
-    // }
   }
 }
