@@ -2,7 +2,12 @@
   &__title {
     font-weight: 700;
     text-align: center;
-    margin-bottom: rem(20);
+    margin-bottom: 20px;
+
+    @media (max-width: 1200px) {
+      max-width: 370px;
+      margin: 0 auto 30px;
+    }
   }
 
   &__subtext span,
@@ -12,13 +17,18 @@
   }
 
   &__text {
-    @include adaptiveValue("margin-bottom", 40, 20);
-    font-size: rem(20);
+    // @include adaptiveValue("margin-bottom", 40, 20);
+    // margin-bottom: 40px;
+    font-size: 20px;
     font-weight: 400;
     @include line-height(20, 26);
     text-align: center;
-    max-width: rem(545);
-    margin: 0 auto;
+    max-width: 545px;
+    margin: 0 auto 40px;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
   }
 
   &__text p {
@@ -28,23 +38,48 @@
   &__items {
     display: flex;
     justify-content: center;
-    gap: rem(20);
+    gap: 20px;
+
+    @media (max-width: 1200px) {
+      // max-width: 100%;
+      width: 1400px;
+      overflow: auto;
+      // height: 55vh;
+      // width: 395px;
+      // overflow: overlay;
+
+      // overflow: scroll;
+      // overflow-y: scroll;
+      justify-content: start;
+    }
   }
 
   &__item {
     position: relative;
+
+    @media (max-width: 1200px) {
+      width: 395px;
+      // width: 395px;
+      // overflow: overlay;
+    }
   }
 
   &__img {
-    width: rem(325);
-    height: rem(485);
+    width: 325px;
+    height: 485px;
     object-fit: cover;
     border-radius: 20px;
+
+    @media (max-width: 576px) {
+      width: 240px;
+      height: 295px;
+    }
   }
 
   &__box {
     border-radius: 20px;
-    @include adaptiveValue("padding-top", 40, 20);
+    // @include adaptiveValue("padding-top", 40, 20);
+    padding-top: 40px;
     position: absolute;
     bottom: 4px;
     left: 0;
@@ -54,19 +89,33 @@
   }
 
   &__subtitle {
-    @include adaptiveValue("margin-bottom", 30, 20);
-    font-size: rem(24);
+    // @include adaptiveValue("margin-bottom", 30, 20);
+    margin-bottom: 30px;
+    // font-size: rem(24);
+    font-size: 24px;
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
   }
 
   &__subtext {
-    margin-bottom: rem(20);
+    // margin-bottom: rem(20);
+    margin-bottom: 20px;
     letter-spacing: -0.2px;
+
+    @media (max-width: 576px) {
+      font-size: 12px;
+      max-width: 205px;
+    }
   }
 
   &__subtext span {
     display: block;
-    max-width:rem(260);
+    // max-width: rem(260);
+    max-width: 260px;
     margin: 0 auto;
-    margin-bottom: rem(10);
+    // margin-bottom: rem(10);
+    margin-bottom: 10px;
   }
 }

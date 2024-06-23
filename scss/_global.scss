@@ -97,17 +97,28 @@ body {
   @include line-height(48, 60);
   font-weight: 700; //потом проверить проставлнгл ли
 
+  @media (max-width: 1200px) {
+    line-height: 1.0;
+  }
+
   @media (max-width: 576px) {
     font-size: 28px;
   }
-
 }
 
 .section {
-  // @include adaptiveValue("padding-top", 60, 65);
-  // @include adaptiveValue("padding-bottom", 60, 65);
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .logo {
