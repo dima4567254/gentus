@@ -50,23 +50,24 @@
   z-index: 100;
 }
 
-.slick-track {
-  display: flex;
-  align-items: center;
-}
+// .slick-track {
+//   display: flex;
+//   align-items: center;
+// }
 
 .slick-slide {
-  margin: 0 15px;/* Отступы между слайдами */
+  // !!!
+  // margin: 0 15px;/* Отступы между слайдами */
 }
 
-.slick-slide .slick-active {
-  transform: scale(0);
-}
+// .slick-slide .slick-active {
+//   transform: scale(0);
+// }
 
 .slick-list {
-  padding-top: 190px !important;
-  padding-bottom: 180px !important;
-  margin: 0 -15px;
+  // padding-top: 190px !important;
+  // padding-bottom: 180px !important;
+  // margin: 0 -15px;!!!!
   /* Убираем общие отступы для выравнивания */
 }
 

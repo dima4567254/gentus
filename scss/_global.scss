@@ -17,6 +17,7 @@
 html,
 body {
   height: 100%;
+  // overflow-x: hidden;
 }
 
 body {
@@ -59,7 +60,9 @@ body {
   }
 
   &--expertise {
-    max-width: 1225px;
+    // max-width: 1020px;
+    max-width: 1080px;
+    // max-width: 1225px;
   }
 
   &--reviews {

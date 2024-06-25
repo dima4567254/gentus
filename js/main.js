@@ -38,6 +38,43 @@ $('.reviews-slider').slick({
   //     },
   // ]
 });
+
+
+
+
+$('.expertise__items').slick({
+  slidesToShow: 3,  /* количество слайдов на показ*/
+  slidesToScroll: 1,
+  // centerMode: true,
+  arrows: false,
+
+  // variableWidth: true,
+  // centerPadding: '0%',
+  // variableWidth: true,
+
+  // autoplay: true,
+  // autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        // slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 577,
+      settings: {
+        // slidesToShow: 1.50,
+        slidesToShow: 2,
+        // settings: "unslick",
+        // centerMode: true,
+        // centerPadding: '30%'
+        // slidesToScroll: 2,
+      }
+    },
+  ]
+});
 // $(document).ready(function () {
 //   $('.reviews-slider').slick({
 //     arrows: true

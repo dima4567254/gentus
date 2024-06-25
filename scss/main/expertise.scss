@@ -36,36 +36,22 @@
   }
 
   &__items {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    // margin: 0 -0px;
 
     @media (max-width: 1200px) {
-      // max-width: 100%;
-      width: 1400px;
-      overflow: auto;
-      // height: 55vh;
-      // width: 395px;
-      // overflow: overlay;
-
-      // overflow: scroll;
-      // overflow-y: scroll;
       justify-content: start;
     }
   }
 
   &__item {
     position: relative;
+    // margin: 0 0px;
 
-    @media (max-width: 1200px) {
-      width: 395px;
-      // width: 395px;
-      // overflow: overlay;
-    }
+    @media (max-width: 1200px) {}
   }
 
   &__img {
-    width: 325px;
+    width: 330px;
     height: 485px;
     object-fit: cover;
     border-radius: 20px;
@@ -81,11 +67,16 @@
     // @include adaptiveValue("padding-top", 40, 20);
     padding-top: 40px;
     position: absolute;
-    bottom: 4px;
+    bottom: 0;
     left: 0;
     text-align: center;
     width: 100%;
+    max-width: 330px;
     background: linear-gradient(180.00deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.69) 50.292%);
+
+    @media (max-width: 576px) {
+      max-width: 240px;
+    }
   }
 
   &__subtitle {
@@ -119,3 +110,19 @@
     margin-bottom: 10px;
   }
 }
+
+// .slick-slide .slick-cloned {
+
+// }
+
+// .slick-slide .slick-active {
+//   max-width: 325px;
+// }
+
+// .slick-slide {
+//   // width: auto !important;
+//   margin-right: 20px; /* Adjust the margin to control the overlap */
+// }
+// .slick-list {
+//   overflow: visible;
+// }
