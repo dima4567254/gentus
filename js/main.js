@@ -39,8 +39,20 @@ $('.reviews-slider').slick({
   // ]
 });
 
-
-
+// $(function name(params) {
+const swiper = new Swiper('.sliderReviews', {
+  slidesPerView: 5,
+  loop: true,
+  loopedslides: 1,
+  centeredSlides: true,
+  spaceBetween: 15,
+  // slidesPerView: 'auto',
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+// })
 
 $('.expertise__items').slick({
   slidesToShow: 3,  /* количество слайдов на показ*/
@@ -75,6 +87,31 @@ $('.expertise__items').slick({
     },
   ]
 });
+
+// const slidercasey = new Swiper('.slidercasey', {
+//   slidesPerView: 3,
+//   // loop: true,
+//   // loopedslides: 1,
+//   spaceBetween: 30,
+//   navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//   },
+//   // breakpoints: {
+//   //     870: {
+//   //         slidesPerView: 3,
+//   //     },
+
+//   //     615: {
+//   //         slidesPerView: 2,
+//   //     },
+
+//   //     319: {
+//   //         slidesPerView: 1,
+//   //     },
+//   // },
+// });
+
 // $(document).ready(function () {
 //   $('.reviews-slider').slick({
 //     arrows: true
