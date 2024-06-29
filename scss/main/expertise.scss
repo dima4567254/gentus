@@ -37,6 +37,11 @@
 
   &__items {
     // margin: 0 -0px;
+    // max-width: 100%;
+    // margin: auto;
+    // overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 
     @media (max-width: 1200px) {
       justify-content: start;
@@ -46,6 +51,9 @@
   &__item {
     position: relative;
     // margin: 0 0px;
+    @media (max-width: 768px) { 
+      max-width: 330px;
+    }
 
     @media (max-width: 1200px) {}
   }
@@ -71,7 +79,7 @@
     left: 0;
     text-align: center;
     width: 100%;
-    max-width: 330px;
+    // max-width: 330px;
     background: linear-gradient(180.00deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.69) 50.292%);
 
     @media (max-width: 576px) {
@@ -126,3 +134,39 @@
 // .slick-list {
 //   overflow: visible;
 // }
+
+@media (max-width: 768px) { }
+@media (max-width: 768px) { 
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 66.66%; /* Каждый слайд занимает 66.66% ширины экрана */
+    max-width: 66.66%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+}

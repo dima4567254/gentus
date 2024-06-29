@@ -1,3 +1,98 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const slidesContainer = document.querySelector('.slides');
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let index = 1; // Начинаем с первого слайда (индекс 1 для учета клонированного слайда)
+
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  // Клонируем первый и последний слайд для создания зацикленности
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[totalSlides - 1].cloneNode(true);
+  slidesContainer.appendChild(firstClone);
+  slidesContainer.insertBefore(lastClone, slides[0]);
+
+  // Устанавливаем начальное смещение для отображения первого слайда
+  slidesContainer.style.transform = `translateX(-${index * 66.66}vw)`;
+
+  // Обновление слайдов с учётом зацикленности
+  function updateSlides() {
+      slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+      slidesContainer.style.transform = `translateX(-${index * 66.66}vw)`;
+  }
+
+  // Обработка свайпа слайдов
+  function handleGesture(e) {
+      switch (e.type) {
+          case 'mousedown':
+          case 'touchstart':
+              isDragging = true;
+              startX = e.pageX || e.touches[0].pageX;
+              break;
+          case 'mousemove':
+          case 'touchmove':
+              if (isDragging) {
+                  currentX = e.pageX || e.touches[0].pageX;
+              }
+              break;
+          case 'mouseup':
+          case 'touchend':
+              if (isDragging) {
+                  const deltaX = currentX - startX;
+                  if (deltaX > 50) {
+                      prevSlide();
+                  } else if (deltaX < -50) {
+                      nextSlide();
+                  }
+                  isDragging = false;
+              }
+              break;
+      }
+  }
+
+  slidesContainer.addEventListener('mousedown', handleGesture);
+  slidesContainer.addEventListener('touchstart', handleGesture);
+  slidesContainer.addEventListener('mousemove', handleGesture);
+  slidesContainer.addEventListener('touchmove', handleGesture);
+  slidesContainer.addEventListener('mouseup', handleGesture);
+  slidesContainer.addEventListener('touchend', handleGesture);
+
+  // Переключение на следующий слайд
+  function nextSlide() {
+      index++;
+      updateSlides();
+
+      // Если достигли последнего слайда (клона первого оригинала), переходим на первый слайд
+      if (index === totalSlides + 1) {
+          setTimeout(() => {
+              index = 1;
+              slidesContainer.style.transition = 'none';
+              slidesContainer.style.transform = `translateX(-${index * 66.66}vw)`;
+          }, 500); // Задержка соответствует времени анимации (0.5 секунды)
+      }
+  }
+
+  // Переключение на предыдущий слайд
+  function prevSlide() {
+      index--;
+      updateSlides();
+
+      // Если достигли первого слайда (клона последнего оригинала), переходим к последнему слайду
+      if (index === 0) {
+          setTimeout(() => {
+              index = totalSlides;
+              slidesContainer.style.transition = 'none';
+              slidesContainer.style.transform = `translateX(-${index * 66.66}vw)`;
+          }, 500); // Задержка соответствует времени анимации (0.5 секунды)
+      }
+  }
+
+  // Вызываем функцию для начального отображения слайдов
+  updateSlides();
+});
+
 
 $('.menu__link, .menu__btn').on('click', function () {
   $('.menu__items, .menu__btn').toggleClass('active');
@@ -39,79 +134,39 @@ $('.reviews-slider').slick({
   // ]
 });
 
-// $(function name(params) {
-const swiper = new Swiper('.sliderReviews', {
-  slidesPerView: 5,
-  loop: true,
-  loopedslides: 1,
-  centeredSlides: true,
-  spaceBetween: 15,
-  // slidesPerView: 'auto',
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-// })
+// $('.expertise__items').slick({
+//   slidesToShow: 3,  /* количество слайдов на показ*/
+//   slidesToScroll: 1,
+//   // centerMode: true,
+//   arrows: false,
 
-$('.expertise__items').slick({
-  slidesToShow: 3,  /* количество слайдов на показ*/
-  slidesToScroll: 1,
-  // centerMode: true,
-  arrows: false,
+//   // variableWidth: true,
+//   // centerPadding: '0%',
+//   // variableWidth: true,
 
-  // variableWidth: true,
-  // centerPadding: '0%',
-  // variableWidth: true,
-
-  // autoplay: true,
-  // autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        // slidesToScroll: 2,
-      }
-    },
-    {
-      breakpoint: 577,
-      settings: {
-        // slidesToShow: 1.50,
-        slidesToShow: 2,
-        // settings: "unslick",
-        // centerMode: true,
-        // centerPadding: '30%'
-        // slidesToScroll: 2,
-      }
-    },
-  ]
-});
-
-// const slidercasey = new Swiper('.slidercasey', {
-//   slidesPerView: 3,
-//   // loop: true,
-//   // loopedslides: 1,
-//   spaceBetween: 30,
-//   navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//   },
-//   // breakpoints: {
-//   //     870: {
-//   //         slidesPerView: 3,
-//   //     },
-
-//   //     615: {
-//   //         slidesPerView: 2,
-//   //     },
-
-//   //     319: {
-//   //         slidesPerView: 1,
-//   //     },
-//   // },
+//   // autoplay: true,
+//   // autoplaySpeed: 3000,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 2,
+//         // slidesToScroll: 2,
+//       }
+//     },
+//     {
+//       breakpoint: 577,
+//       settings: {
+//         // slidesToShow: 1.50,
+//         slidesToShow: 2,
+//         // settings: "unslick",
+//         // centerMode: true,
+//         // centerPadding: '30%'
+//         // slidesToScroll: 2,
+//       }
+//     },
+//   ]
 // });
-
 // $(document).ready(function () {
 //   $('.reviews-slider').slick({
 //     arrows: true
@@ -156,6 +211,9 @@ $('.expertise__items').slick({
 //       }
 //   });
 // });
+
+
+
 
 $(document).ready(function () {
   $('.questions__items > li > .questions__text').hide();

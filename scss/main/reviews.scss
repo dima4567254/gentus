@@ -22,342 +22,126 @@
 }
 
 .reviews-slider {
-  // @include adaptiveValue("margin-bottom", 55, 20);
-  margin-bottom: 55px;
+  @include adaptiveValue("margin-bottom", 55, 20);
   display: flex;
   align-items: center;
 
   &__img {
-    // width: 220px;
-    width: 225px;
-    height: 465px;
+    width: rem(220);
+    height: rem(465);
     border-radius: 30px;
   }
 }
 
-// .reviews-slider .slick-slide {
-//   opacity: .7;
-// }
+.reviews-slider .slick-slide {
+  opacity: .7;
+}
 
-// .reviews-slider .slick-center {
-//   transition: .5s;
-//   transform: scale(1.8);
-//   opacity: 1;
-//   z-index: 100;
-// }
+.reviews-slider .slick-center {
+  transition: .5s;
+  transform: scale(1.8);
+  opacity: 1;
+  z-index: 100;
+}
 
-// .reviews-slider .slick-center .reviews-slider__img {
-//   border-radius: 17px;
-//   // height: rem(460);
-//   height: 460px;
-//   z-index: 100;
-// }
+.reviews-slider .slick-center .reviews-slider__img {
+  border-radius: 17px;
+  height: rem(460);
+  z-index: 100;
+}
 
 // .slick-track {
 //   display: flex;
 //   align-items: center;
 // }
 
-// .slick-slide {
-//   // !!!
-//   // margin: 0 15px;/* Отступы между слайдами */
-// }
+.slick-slide {
+  // !!!
+  // margin: 0 15px;/* Отступы между слайдами */
+}
 
 // .slick-slide .slick-active {
 //   transform: scale(0);
 // }
 
-// .slick-list {
-//   // padding-top: 190px !important;
-//   // padding-bottom: 180px !important;
-//   // margin: 0 -15px;!!!!
-//   /* Убираем общие отступы для выравнивания */
-// }
-
-// .slick-prev,
-// .slick-next {
-//   transition: color .5s;
-
-//   &:focus {
-//     color: $ac;
-//   }
-
-//   &:hover {
-//     &::before {
-//       background-color: $ac;
-//     }
-//   }
-
-//   &:active {
-//     color: $active;
-//   }
-// }
-
-
-// .slick-next {
-//   border: none;
-//   background-color: transparent;
-//   font-size: 0;
-//   background-image: url('../images/sprite/arrow-right.svg');
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   position: relative;
-//   width: 36px;
-//   height: 24px;
-//   margin-left: 20px;
-//   width: 100%;
-//   max-width: 50px;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 24px;
-//     height: 24px;
-//     border-radius: 50%;
-//     background-color: #26628E;
-//     z-index: -100;
-//   }
-// }
-
-// .slick-prev {
-//   border: none;
-//   background-color: transparent;
-//   font-size: 0;
-//   background-image: url('../images/sprite/arrow-left.svg');
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   position: relative;
-//   width: 36px;
-//   height: 24px;
-//   margin-right: 20px;
-//   width: 100%;
-//   max-width: 50px;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 24px;
-//     height: 24px;
-//     border-radius: 50%;
-//     background-color: #26628E;
-//     z-index: -100;
-//   }
-// }
-
-.slider-casey__items {
-  display: flex;
-  align-items: center;
-  // margin: 0 -15px;
+.slick-list {
+  // padding-top: 190px !important;
+  // padding-bottom: 180px !important;
+  // margin: 0 -15px;!!!!
+  /* Убираем общие отступы для выравнивания */
 }
 
-.slider-casey__wrapper {
-  // max-width: 1110px;
-  // max-width: 1250px; 
-  // max-width: 1260px; 
-  max-width: 1180px; 
-  overflow: hidden;
-  margin: 0 auto;
+.slick-prev,
+.slick-next {
+  transition: color .5s;
+
+  &:focus {
+    color: $ac;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $ac;
+    }
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
+
+.slick-next {
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  background-image: url('../images/sprite/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
+  width: 36px;
+  height: 24px;
+  margin-left: 20px;
+  width: 100%;
+  max-width: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #26628E;
+    z-index: -100;
+  }
 }
 
-.swiper-slide-active {
-  padding-top: 190px !important;
-  padding-bottom: 180px !important;
-  transform: scale(1.8) !important;
-  z-index: 100;
+.slick-prev {
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  background-image: url('../images/sprite/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 36px;
+  height: 24px;
+  margin-right: 20px;
+  width: 100%;
+  max-width: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #26628E;
+    z-index: -100;
+  }
 }
 
-// сделать центровой слайд активным 
-// доделать полностью этот слайдер 
-// сделать тот второй
-// и по пп
-
-.swiper-slide {
-  // margin: 0;
-  // padding: 0px 0px 0px 0px;
-  // max-width: 225px;
-}
-
-.reviews-slider__item {
-  // max-width: 225px;
-  margin-right: -15px;
-}
-
-.swiper-slide {}
-
-// --------------------------------
-// .swiper-button-next {
-//   right: 0;
-// }
-
-// .swiper-button-prev {
-//   left: 0;
-// }
-
-// .swiper-button-next,
-// .swiper-button-prev {
-//   border-radius: 4px;
-//   background-color: $hover;
-//   padding: 24px;
-//   color: $white;
-//   border-radius: 4px;
-//   top: 54%;
-
-//   @media (max-width: 1200px) {
-//       top: 5%;
-//   }
-
-//   @media (max-width: 992px) {
-//       top: 20px;
-//   }
-
-//   &:before {
-//       content: "";
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       height: 100%;
-//       width: 100%;
-//       opacity: 0;
-//       transition: opacity .6s;
-//       background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
-//   }
-
-//   &:hover {
-//       // opacity: 1;
-
-//       &:before {
-//           opacity: 1;
-//       }
-//   }
-// }
-// сравнить с вип цетром и сделать по пп
-
-
-// .slider-casey {
-//   position: relative;
-
-//   // &__images {
-//   //     object-fit: cover;
-//   //     position: absolute;
-//   //     width: 352px;
-//   //     height: 558px;
-//   //     top: 0%;
-//   //     left: -31%;
-
-//   //     @media (max-width: 1200px) {
-//   //         left: -25%;
-//   //         width: 285px;
-//   //         height: 450px;
-//   //     }
-
-//   //     @media (max-width: 992px) {
-//   //         width: 220px;
-//   //         height: 345px;
-//   //         left: -20%;
-//   //     }
-
-//   //     @media (max-width: 768px) {
-//   //         width: 155px;
-//   //         height: 240px;
-//   //     }
-
-//   //     @media (max-width: 576px) {
-//   //         width: 85px;
-//   //         height: 135px;
-//   //     }
-//   // }
-
-//   // &__wrapper {
-//   //     max-width: 1110px;
-//   //     // overflow: hidden;
-//   //     // margin: 0 auto;
-//   // }
-
-//   // &__title {
-//   //     text-align: center;
-//   // }
-
-//   // &__items {
-//   //     display: flex;
-//   // }
-
-//   // &__item {
-//   //     max-width: 350px;
-//   //     margin: 0 auto;
-
-//   //     @media (max-width: 576px) {
-//   //         margin-top: 20px;
-//   //     }
-//   // }
-
-//   // &__inner {
-//   //     padding: 15px;
-//   //     background-color: $black;
-
-//   //     @media (max-width: 576px) {
-//   //         padding: 10px;
-//   //     }
-//   // }
-
-//   // &__img {
-//   //     width: 350px;
-//   //     height: 230px;
-//   //     object-fit: cover;
-//   //     vertical-align: top;
-//   // }
-
-//   // &__subtitle {
-//   //     font-size: 23px;
-//   //     display: -webkit-box;
-//   //     -webkit-line-clamp: 1;
-//   //     -webkit-box-orient: vertical;
-//   //     overflow: hidden;
-//   // }
-
-//   // &__text {
-//   //     margin-bottom: 20px;
-//   // }
-
-//   // &__text span {
-//   //     font-weight: 600;
-//   //     margin-left: 10px;
-//   // }
-
-//   // &__list {
-//   //     display: flex;
-//   //     justify-content: space-between;
-//   //     border-top: 1px solid hsla(0, 0%, 100%, .35);
-//   //     border-bottom: 1px solid hsla(0, 0%, 100%, .35);
-//   //     padding: 20px 0;
-
-//   //     @media (max-width: 576px) {
-//   //         padding: 10px 0;
-//   //     }
-//   // }
-
-//   // &__item {
-//   //     margin-bottom: 20px;
-//   // }
-
-//   // &__first {
-//   //     // color: $gray;
-//   // }
-
-//   // &__to {
-//   //     // color: $orange;
-//   // }
-
-//   // &__after {
-//   //     // color: $green;
-//   // }
-
-//   // &__to span,
-//   // &__after span {
-//   //     margin-left: 5px;
-//   // }
-// }
